@@ -8,6 +8,7 @@ Adjusts bandit, looter, deserter, sea raider, and corsair party sizes and counts
 - War Sails: optional (only affects pirate clans; the mod runs fine without it)
 
 ## Logging
+- Logging is opt-in (default off as of 1.2.8.3).
 - Enable logging in MCM: Logs -> Enable Logging.
 - Log file location:
   - %USERPROFILE%\Documents\Mount and Blade II Bannerlord\Configs\ModLogs\AdjustableBandits.log
@@ -52,14 +53,15 @@ Adjusts bandit, looter, deserter, sea raider, and corsair party sizes and counts
 - Maximum Player Troops in Hideout Mission: 10
 
 ## Build and Deploy (VS Code)
-- Build task: mvn -B verify (if needed for packaging tools)
-- Release task uses .vscode/build-release.ps1 to build and deploy into the Bannerlord Modules folder.
+- Debug task: .vscode/build-debug.ps1 (MSBuild restore + build).
+- Release task: .vscode/build-release.ps1 (MSBuild restore + build, then deploys to your Bannerlord Modules folder).
+- Optional env vars in .env:
+  - MSBUILD_PATH: override MSBuild path.
+  - MOD_ROOT or GAME_MODULE_DIR: override the deploy path for the module.
 
 ## Steam Workshop
-- Create item: _Workshop/WorkshopCreate.bat
 - Update item: _Workshop/WorkshopUpdate.bat
 - XML files:
-  - WorkshopCreate.xml
   - _Workshop/WorkshopUpdate.xml
 
 ## Notes
