@@ -1,0 +1,66 @@
+{
+  "Looters": {
+    "Multiplier": 3.0,
+    "NumberOfMinParties": 120,
+    "NumberOfMaxParties": 200
+  },
+  "Bandit": {
+    "Multiplier": 1.0,
+    "NumberOfMinParties": 20,
+    "NumberOfMaxParties": 80
+  },
+  "DesertBandit": {
+    "Multiplier": 0.6,
+    "NumberOfMinParties": 20,
+    "NumberOfMaxParties": 80
+  },
+  "SteppeBandit": {
+    "Multiplier": 0.6,
+    "NumberOfMinParties": 20,
+    "NumberOfMaxParties": 80
+  },
+  "ForestBandit": {
+    "Multiplier": 0.6,
+    "NumberOfMinParties": 20,
+    "NumberOfMaxParties": 80
+  },
+  "MountainBandit": {
+    "Multiplier": 0.6,
+    "NumberOfMinParties": 20,
+    "NumberOfMaxParties": 80
+  },
+  "Deserter": {
+    "Multiplier": 1.0,
+    "NumberOfMinParties": 20,
+    "NumberOfMaxParties": 80
+  },
+  "SeaRaider": {
+    "Multiplier": 0.6,
+    "NumberOfMinParties": 20,
+    "NumberOfMaxParties": 80
+  },
+  "NorthernPirate": {
+    "Multiplier": 0.6,
+    "NumberOfMinParties": 20,
+    "NumberOfMaxParties": 80
+  },
+  "SouthernPirate": {
+    "Multiplier": 0.6,
+    "NumberOfMinParties": 20,
+    "NumberOfMaxParties": 80
+  },
+  "Hideout": {
+    "NumberOfInitialHideoutsAtEachBanditFaction": 3,
+    "NumberOfMaximumHideoutsAtEachBanditFaction": 10,
+    "NumberOfMinimumBanditPartiesInAHideoutToInfestIt": 2,
+    "NumberOfMaximumBanditPartiesAroundEachHideout": 8,
+    "NumberOfMaximumBanditPartiesInEachHideout": 4,
+    "NumberOfMaximumTroopCountForFirstFightInHideoutFactor": 1.0,
+    "NumberOfMaximumTroopCountForBossFightInHideoutFactor": 1.0,
+    "SpawnPercentageForFirstFightInHideoutMission": 0.75,
+    "NumberOfMinimumBanditTroopsInHideoutMission": 10,
+    "PlayerMaximumTroopCountForHideoutMission": 10
+  },
+  "BanditPartySizeLimit": 20,
+  "EnableLogging": false
+}

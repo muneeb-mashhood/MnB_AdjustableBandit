@@ -21,10 +21,32 @@ namespace AdjustableBandits
 		public override string FolderName => "AdjustableBandits";
 		public override string FormatType => "json";
 
+		public void NormalizeMinMaxValues()
+		{
+			if (NumberOfMinimumLooterParties > NumberOfMaximumLooterParties)
+				NumberOfMinimumLooterParties = NumberOfMaximumLooterParties;
+			if (NumberOfMinimumDeserterParties > NumberOfMaximumDeserterParties)
+				NumberOfMinimumDeserterParties = NumberOfMaximumDeserterParties;
+			if (NumberOfMinimumDesertBanditParties > NumberOfMaximumDesertBanditParties)
+				NumberOfMinimumDesertBanditParties = NumberOfMaximumDesertBanditParties;
+			if (NumberOfMinimumSteppeBanditParties > NumberOfMaximumSteppeBanditParties)
+				NumberOfMinimumSteppeBanditParties = NumberOfMaximumSteppeBanditParties;
+			if (NumberOfMinimumForestBanditParties > NumberOfMaximumForestBanditParties)
+				NumberOfMinimumForestBanditParties = NumberOfMaximumForestBanditParties;
+			if (NumberOfMinimumMountainBanditParties > NumberOfMaximumMountainBanditParties)
+				NumberOfMinimumMountainBanditParties = NumberOfMaximumMountainBanditParties;
+			if (NumberOfMinimumSeaRaiderParties > NumberOfMaximumSeaRaiderParties)
+				NumberOfMinimumSeaRaiderParties = NumberOfMaximumSeaRaiderParties;
+			if (NumberOfMinimumNorthernPirateParties > NumberOfMaximumNorthernPirateParties)
+				NumberOfMinimumNorthernPirateParties = NumberOfMaximumNorthernPirateParties;
+			if (NumberOfMinimumSouthernPirateParties > NumberOfMaximumSouthernPirateParties)
+				NumberOfMinimumSouthernPirateParties = NumberOfMaximumSouthernPirateParties;
+		}
+
 		#region BANDIT POPULATION
 		private const string LootersGroupName = "{=adjban_group_Looters}Looters";
 		private const string BanditsGroupName = "{=adjban_group_Bandits}Bandits";
-		private const string SeaRaidersGroupName = "{=adjban_group_SeaRaidersCorsairs}Sea Raiders & Corsairs";
+		private const string SeaRaidersGroupName = "{=adjban_group_SeaRaidersCorsairs}Sea Raiders & Pirates";
 		private const string DesertersGroupName = "{=adjban_group_Deserters}Deserters";
 		private const string LogsGroupName = "{=adjban_group_Logs}Logs";
 
@@ -34,8 +56,8 @@ namespace AdjustableBandits
 			100.0f,
 			"0.00",
 			RequireRestart = false,
-			HintText = "{=adjban_hint_BanditPartySizeMultiplier}Scales other bandit party sizes (not looters, sea raiders, or corsairs). Applies to newly spawned parties. [Default: 1.00]",
-			Order = 6)]
+			HintText = "{=adjban_hint_BanditPartySizeMultiplier}Scales other bandit party sizes (not looters, sea raiders, or pirates). Applies to newly spawned parties. [Default: 1.00]",
+			Order = 12)]
 		[SettingPropertyGroup(
 			BanditsGroupName,
 			GroupOrder = 2)]
@@ -61,7 +83,7 @@ namespace AdjustableBandits
 			"0.00",
 			RequireRestart = false,
 			HintText = "Scales steppe bandit party sizes. Applies to newly spawned parties. [Default: 0.60]",
-			Order = 2)]
+			Order = 3)]
 		[SettingPropertyGroup(
 			BanditsGroupName,
 			GroupOrder = 2)]
@@ -74,11 +96,24 @@ namespace AdjustableBandits
 			"0.00",
 			RequireRestart = false,
 			HintText = "Scales forest bandit party sizes. Applies to newly spawned parties. [Default: 0.60]",
-			Order = 4)]
+			Order = 6)]
 		[SettingPropertyGroup(
 			BanditsGroupName,
 			GroupOrder = 2)]
 		public float ForestBanditMultiplier { get; set; } = 0.6f;
+		
+		[SettingPropertyFloatingInteger(
+			"Mountain Bandit Party Size Multiplier",
+			0.01f,
+			100.0f,
+			"0.00",
+			RequireRestart = false,
+			HintText = "Scales mountain bandit party sizes. Applies to newly spawned parties. [Default: 0.60]",
+			Order = 9)]
+		[SettingPropertyGroup(
+			BanditsGroupName,
+			GroupOrder = 2)]
+		public float MountainBanditMultiplier { get; set; } = 0.6f;
 
 		[SettingPropertyFloatingInteger(
 			"Looter Party Size Multiplier",
@@ -120,17 +155,30 @@ namespace AdjustableBandits
 		public float SeaRaiderMultiplier { get; set; } = 0.6f;
 
 		[SettingPropertyFloatingInteger(
-			"Corsair Party Size Multiplier",
+			"Northern Pirate Party Size Multiplier",
 			0.01f,
 			100.0f,
 			"0.00",
 			RequireRestart = false,
-			HintText = "Scales corsair party sizes. Applies to newly spawned parties. [Default: 0.60]",
-			Order = 2)]
+			HintText = "Scales northern pirate party sizes. Applies to newly spawned parties. [Default: 0.60]",
+			Order = 3)]
 		[SettingPropertyGroup(
 			SeaRaidersGroupName,
 			GroupOrder = 4)]
-		public float CorsairMultiplier { get; set; } = 0.6f;
+		public float NorthernPirateMultiplier { get; set; } = 0.6f;
+
+		[SettingPropertyFloatingInteger(
+			"Southern Pirate Party Size Multiplier",
+			0.01f,
+			100.0f,
+			"0.00",
+			RequireRestart = false,
+			HintText = "Scales southern pirate party sizes. Applies to newly spawned parties. [Default: 0.60]",
+			Order = 6)]
+		[SettingPropertyGroup(
+			SeaRaidersGroupName,
+			GroupOrder = 4)]
+		public float SouthernPirateMultiplier { get; set; } = 0.6f;
 
 		[SettingPropertyInteger(
 			"{=adjban_name_BanditPartySizeLimit}Bandit Party Size Limit (affects Movement Speed)",
@@ -140,7 +188,7 @@ namespace AdjustableBandits
 			RequireRestart = false,
 			HintText =
 			"{=adjban_hint_BanditPartySizeLimit}Movement speed penalty starts when a bandit party exceeds this limit; higher values reduce or remove the penalty. [Default: 20]",
-			Order = 8)]
+			Order = 14)]
 		[SettingPropertyGroup(
 			BanditsGroupName,
 			GroupOrder = 2)]
@@ -154,11 +202,24 @@ namespace AdjustableBandits
 			"{=adjban_format_Parties}0 Parties",
 			RequireRestart = false,
 			HintText = "{=adjban_hint_MaxNumLooterParties}Caps total looter parties on the world map. [Default: 200]",
-			Order = 1)]
+			Order = 2)]
 		[SettingPropertyGroup(
 			LootersGroupName,
 			GroupOrder = 1)]
 		public int NumberOfMaximumLooterParties { get; set; } = 200;
+
+		[SettingPropertyInteger(
+			"Minimum Number of Looter Parties",
+			0,
+			1000,
+			"0 Parties",
+			RequireRestart = false,
+			HintText = "Ensures at least this many looter parties exist on the world map. [Default: 150]",
+			Order = 1)]
+		[SettingPropertyGroup(
+			LootersGroupName,
+			GroupOrder = 1)]
+		public int NumberOfMinimumLooterParties { get; set; } = 150;
 
 		[SettingPropertyInteger(
 			"Maximum Number of Deserter Parties",
@@ -167,11 +228,24 @@ namespace AdjustableBandits
 			"0 Parties",
 			RequireRestart = false,
 			HintText = "Caps total deserter parties on the world map. [Default: 30]",
-			Order = 1)]
+			Order = 2)]
 		[SettingPropertyGroup(
 			DesertersGroupName,
 			GroupOrder = 3)]
 		public int NumberOfMaximumDeserterParties { get; set; } = 30;
+
+		[SettingPropertyInteger(
+			"Minimum Number of Deserter Parties",
+			0,
+			1000,
+			"0 Parties",
+			RequireRestart = false,
+			HintText = "Ensures at least this many deserter parties exist on the world map. [Default: 150]",
+			Order = 1)]
+		[SettingPropertyGroup(
+			DesertersGroupName,
+			GroupOrder = 3)]
+		public int NumberOfMinimumDeserterParties { get; set; } = 150;
 
 		[SettingPropertyInteger(
 			"Maximum Number of Bandit Parties (other bandits)",
@@ -179,8 +253,8 @@ namespace AdjustableBandits
 			1000,
 			"0 Parties",
 			RequireRestart = false,
-			HintText = "Caps total other bandit parties (not looters, sea raiders, or corsairs). [Default: 5]",
-			Order = 7)]
+			HintText = "Caps total other bandit parties (not looters, sea raiders, or pirates). [Default: 5]",
+			Order = 13)]
 		[SettingPropertyGroup(
 			BanditsGroupName,
 			GroupOrder = 2)]
@@ -193,11 +267,24 @@ namespace AdjustableBandits
 			"0 Parties",
 			RequireRestart = false,
 			HintText = "Caps total desert bandit parties on the world map. [Default: 5]",
-			Order = 1)]
+			Order = 2)]
 		[SettingPropertyGroup(
 			BanditsGroupName,
 			GroupOrder = 2)]
 		public int NumberOfMaximumDesertBanditParties { get; set; } = 5;
+
+		[SettingPropertyInteger(
+			"Minimum Number of Desert Bandit Parties",
+			0,
+			1000,
+			"0 Parties",
+			RequireRestart = false,
+			HintText = "Ensures at least this many desert bandit parties exist on the world map. [Default: 150]",
+			Order = 1)]
+		[SettingPropertyGroup(
+			BanditsGroupName,
+			GroupOrder = 2)]
+		public int NumberOfMinimumDesertBanditParties { get; set; } = 150;
 
 		[SettingPropertyInteger(
 			"Maximum Number of Steppe Bandit Parties",
@@ -206,11 +293,24 @@ namespace AdjustableBandits
 			"0 Parties",
 			RequireRestart = false,
 			HintText = "Caps total steppe bandit parties on the world map. [Default: 5]",
-			Order = 3)]
+			Order = 5)]
 		[SettingPropertyGroup(
 			BanditsGroupName,
 			GroupOrder = 2)]
 		public int NumberOfMaximumSteppeBanditParties { get; set; } = 5;
+
+		[SettingPropertyInteger(
+			"Minimum Number of Steppe Bandit Parties",
+			0,
+			1000,
+			"0 Parties",
+			RequireRestart = false,
+			HintText = "Ensures at least this many steppe bandit parties exist on the world map. [Default: 150]",
+			Order = 4)]
+		[SettingPropertyGroup(
+			BanditsGroupName,
+			GroupOrder = 2)]
+		public int NumberOfMinimumSteppeBanditParties { get; set; } = 150;
 
 		[SettingPropertyInteger(
 			"Maximum Number of Forest Bandit Parties",
@@ -219,11 +319,50 @@ namespace AdjustableBandits
 			"0 Parties",
 			RequireRestart = false,
 			HintText = "Caps total forest bandit parties on the world map. [Default: 5]",
-			Order = 5)]
+			Order = 8)]
 		[SettingPropertyGroup(
 			BanditsGroupName,
 			GroupOrder = 2)]
 		public int NumberOfMaximumForestBanditParties { get; set; } = 5;
+
+		[SettingPropertyInteger(
+			"Minimum Number of Forest Bandit Parties",
+			0,
+			1000,
+			"0 Parties",
+			RequireRestart = false,
+			HintText = "Ensures at least this many forest bandit parties exist on the world map. [Default: 150]",
+			Order = 7)]
+		[SettingPropertyGroup(
+			BanditsGroupName,
+			GroupOrder = 2)]
+		public int NumberOfMinimumForestBanditParties { get; set; } = 150;
+
+		[SettingPropertyInteger(
+			"Maximum Number of Mountain Bandit Parties",
+			0,
+			1000,
+			"0 Parties",
+			RequireRestart = false,
+			HintText = "Caps total mountain bandit parties on the world map. [Default: 5]",
+			Order = 11)]
+		[SettingPropertyGroup(
+			BanditsGroupName,
+			GroupOrder = 2)]
+		public int NumberOfMaximumMountainBanditParties { get; set; } = 5;
+
+		[SettingPropertyInteger(
+			"Minimum Number of Mountain Bandit Parties",
+			0,
+			1000,
+			"0 Parties",
+			RequireRestart = false,
+			HintText = "Ensures at least this many mountain bandit parties exist on the world map. [Default: 150]",
+			Order = 10)]
+		[SettingPropertyGroup(
+			BanditsGroupName,
+			GroupOrder = 2)]
+		public int NumberOfMinimumMountainBanditParties { get; set; } = 150;
 
 		[SettingPropertyInteger(
 			"Maximum Number of Sea Raider Parties",
@@ -232,24 +371,76 @@ namespace AdjustableBandits
 			"0 Parties",
 			RequireRestart = false,
 			HintText = "Caps total sea raider parties on the world map. [Default: 5]",
-			Order = 1)]
+			Order = 2)]
 		[SettingPropertyGroup(
 			SeaRaidersGroupName,
 			GroupOrder = 4)]
 		public int NumberOfMaximumSeaRaiderParties { get; set; } = 5;
 
 		[SettingPropertyInteger(
-			"Maximum Number of Corsair Parties",
+			"Minimum Number of Sea Raider Parties",
 			0,
 			1000,
 			"0 Parties",
 			RequireRestart = false,
-			HintText = "Caps total corsair parties on the world map. [Default: 5]",
-			Order = 3)]
+			HintText = "Ensures at least this many sea raider parties exist on the world map. [Default: 150]",
+			Order = 1)]
 		[SettingPropertyGroup(
 			SeaRaidersGroupName,
 			GroupOrder = 4)]
-		public int NumberOfMaximumCorsairParties { get; set; } = 5;
+		public int NumberOfMinimumSeaRaiderParties { get; set; } = 150;
+
+		[SettingPropertyInteger(
+			"Maximum Number of Northern Pirate Parties",
+			0,
+			1000,
+			"0 Parties",
+			RequireRestart = false,
+			HintText = "Caps total northern pirate parties on the world map. [Default: 5]",
+			Order = 5)]
+		[SettingPropertyGroup(
+			SeaRaidersGroupName,
+			GroupOrder = 4)]
+		public int NumberOfMaximumNorthernPirateParties { get; set; } = 5;
+
+		[SettingPropertyInteger(
+			"Minimum Number of Northern Pirate Parties",
+			0,
+			1000,
+			"0 Parties",
+			RequireRestart = false,
+			HintText = "Ensures at least this many northern pirate parties exist on the world map. [Default: 150]",
+			Order = 4)]
+		[SettingPropertyGroup(
+			SeaRaidersGroupName,
+			GroupOrder = 4)]
+		public int NumberOfMinimumNorthernPirateParties { get; set; } = 150;
+
+		[SettingPropertyInteger(
+			"Maximum Number of Southern Pirate Parties",
+			0,
+			1000,
+			"0 Parties",
+			RequireRestart = false,
+			HintText = "Caps total southern pirate parties on the world map. [Default: 5]",
+			Order = 8)]
+		[SettingPropertyGroup(
+			SeaRaidersGroupName,
+			GroupOrder = 4)]
+		public int NumberOfMaximumSouthernPirateParties { get; set; } = 5;
+
+		[SettingPropertyInteger(
+			"Minimum Number of Southern Pirate Parties",
+			0,
+			1000,
+			"0 Parties",
+			RequireRestart = false,
+			HintText = "Ensures at least this many southern pirate parties exist on the world map. [Default: 150]",
+			Order = 7)]
+		[SettingPropertyGroup(
+			SeaRaidersGroupName,
+			GroupOrder = 4)]
+		public int NumberOfMinimumSouthernPirateParties { get; set; } = 150;
 
 		#endregion
 
@@ -404,11 +595,25 @@ namespace AdjustableBandits
 		private const string ActionsGroupName = "{=adjban_group_Actions}Actions";
 
 		[SettingPropertyButton(
+			"Reset settings from defaults JSON",
+			RequireRestart = false,
+			HintText = "Loads values from ModuleData/adjustablebandits.defaults.json and applies them. Reopen MCM to view refreshed values.",
+			Content = "Reset from JSON",
+			Order = 0)]
+		[SettingPropertyGroup(
+			ActionsGroupName,
+			GroupOrder = 7)]
+		public Action ResetSettingsFromJsonDefaults { get; set; } = () =>
+		{
+			AdjustableBandits.ResetSettingsFromJsonDefaults();
+		};
+
+		[SettingPropertyButton(
 			"{=adjban_name_RemoveBanditParties}Remove all bandit parties",
 			RequireRestart = false,
 			HintText = "{=adjban_hint_RemoveBanditParties}Removes all bandit parties from the current game. This cannot be undone.",
 			Content = "{=adjban_content_RemoveBanditParties}Remove bandits",
-			Order = 0)]
+			Order = 1)]
 		[SettingPropertyGroup(
 			ActionsGroupName,
 			GroupOrder = 7)]
@@ -426,6 +631,7 @@ namespace AdjustableBandits
 
 			void action()
 			{
+				AdjustableBandits.LogAction("remove-bandit-parties: begin");
 				int partiesRemoved = 0;
 				int partiesNotRemovedSettlement = 0;
 				int partiesNotRemovedMapEvent = 0;
@@ -463,6 +669,10 @@ namespace AdjustableBandits
 					$"\n {partiesRemoved} parties removed ({troopsRemoved} troops)" +
 					$"\n {partiesNotRemovedSettlement} parties in hideouts were not removed ({troopsHideout} troops)" +
 					$"\n {partiesNotRemovedMapEvent} parties could not be removed due to map events ({troopsMapEvent} troops)"));
+				AdjustableBandits.LogAction(
+					$"remove-bandit-parties: removed={partiesRemoved} troopsRemoved={troopsRemoved} " +
+					$"hideoutParties={partiesNotRemovedSettlement} hideoutTroops={troopsHideout} " +
+					$"mapEventParties={partiesNotRemovedMapEvent} mapEventTroops={troopsMapEvent}");
 			}
 		};
 
@@ -471,7 +681,7 @@ namespace AdjustableBandits
 			RequireRestart = false,
 			HintText = "{=adjban_hint_RemoveHideouts}Removes all hideouts from the current game. This cannot be undone.",
 			Content = "{=adjban_content_RemoveHideouts}Remove hideouts",
-			Order = 1)]
+			Order = 2)]
 		[SettingPropertyGroup(
 			ActionsGroupName,
 			GroupOrder = 7)]
@@ -489,6 +699,7 @@ namespace AdjustableBandits
 
 			void action()
 			{
+				AdjustableBandits.LogAction("remove-hideouts: begin");
 				int hideoutsRemoved = 0;
 				int hideoutsNotRemoved = 0;
 				int partiesRemoved = 0;
@@ -535,7 +746,25 @@ namespace AdjustableBandits
 					$"\n {hideoutsNotRemoved} hideouts not removed" +
 					$"\n {partiesRemoved} parties removed from hideouts ({troopsRemoved} troops)" +
 					$"\n {partiesNotRemovedMapEvent} parties could not be removed due to map events ({troopsMapEvent} troops)"));
+				AdjustableBandits.LogAction(
+					$"remove-hideouts: removed={hideoutsRemoved} notRemoved={hideoutsNotRemoved} " +
+					$"partiesRemoved={partiesRemoved} troopsRemoved={troopsRemoved} " +
+					$"mapEventParties={partiesNotRemovedMapEvent} mapEventTroops={troopsMapEvent}");
 			}
+		};
+
+		[SettingPropertyButton(
+			"Get Party Details",
+			RequireRestart = false,
+			HintText = "Shows total parties and average size per bandit faction; logs every party with its size.",
+			Content = "Get Party Details",
+			Order = 3)]
+		[SettingPropertyGroup(
+			ActionsGroupName,
+			GroupOrder = 7)]
+		public Action ShowPartyDetails { get; set; } = () =>
+		{
+			AdjustableBandits.ShowPartyDetails();
 		};
 		#endregion
 	}

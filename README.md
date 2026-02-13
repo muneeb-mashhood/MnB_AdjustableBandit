@@ -34,11 +34,13 @@ Adjusts bandit, looter, deserter, sea raider, and corsair party sizes and counts
 - Deserter Party Size Multiplier: 1.00
 - Maximum Number of Deserter Parties: 30
 
-### Sea Raiders & Corsairs
+### Sea Raiders & Pirates
 - Sea Raider Party Size Multiplier: 0.60
 - Maximum Number of Sea Raider Parties: 5
-- Corsair Party Size Multiplier: 0.60
-- Maximum Number of Corsair Parties: 5
+- Northern Pirate Party Size Multiplier: 0.60
+- Maximum Number of Northern Pirate Parties: 5
+- Southern Pirate Party Size Multiplier: 0.60
+- Maximum Number of Southern Pirate Parties: 5
 
 ### Hideout & Mission Settings
 - Initial Hideouts per Faction: 3

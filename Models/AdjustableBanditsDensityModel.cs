@@ -47,7 +47,7 @@ namespace AdjustableBandits
 			float troopCount = AdjustableBandits.GetSettings().PlayerMaximumTroopCountForHideoutMission;
 			if (party.HasPerk(DefaultPerks.Tactics.SmallUnitTactics))
 				troopCount += DefaultPerks.Tactics.SmallUnitTactics.PrimaryBonus;
-			return MathF.Round(troopCount);
+			return (int)Math.Round(troopCount);
 		}
 	}
 }

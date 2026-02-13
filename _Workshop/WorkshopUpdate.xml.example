@@ -16,7 +16,8 @@
             <!-- Compatible Version: e1.9.0, v1.0.0,... The currently available versions can be found at the Steam Workshop "Browse by Tag" section -->
             <Tag Value="Utility" />
             <Tag Value="Native" />
-            <Tag Value="Singleplayer" />
+            <Tag Value="Single Player" />
+            <Tag Value="War Sails" />
             <Tag Value="v1.3.14" />
         </Tags>
     </UpdateItem>

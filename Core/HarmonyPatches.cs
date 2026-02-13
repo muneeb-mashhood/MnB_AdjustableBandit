@@ -18,7 +18,7 @@ namespace AdjustableBandits
 		public static void Initialize()
 		{
 			var harmony = new Harmony("sy.adjustablebandits");
-			var fillPartyStacks = AccessTools.Method(typeof(MobileParty), "FillPartyStacks");
+			var fillPartyStacks = FindFillPartyStacksMethod();
 			var partySizeLimit = AccessTools.Method(typeof(DefaultPartySizeLimitModel), "CalculateMobilePartyMemberSizeLimit");
 			var createBanditParty = AccessTools.Method(typeof(BanditPartyComponent), "CreateBanditParty");
 			var createLooterParty = AccessTools.Method(typeof(BanditPartyComponent), "CreateLooterParty");
@@ -37,7 +37,7 @@ namespace AdjustableBandits
 		{
 			if (target == null)
 			{
-				FileLog.Log($"Adjustable Bandits: missing method for patch '{postfixName}'.");
+				AdjustableBandits.LogError($"Adjustable Bandits: missing method for patch '{postfixName}'.");
 				return;
 			}
 
@@ -48,8 +48,41 @@ namespace AdjustableBandits
 			}
 			catch (Exception exc)
 			{
-				FileLog.Log($"Adjustable Bandits: patch failed '{postfixName}': {exc}");
+				AdjustableBandits.LogError($"Adjustable Bandits: patch failed '{postfixName}': {exc}");
 			}
+		}
+
+		private static MethodInfo FindFillPartyStacksMethod()
+		{
+			var names = new[]
+			{
+				"FillPartyStacks",
+				"FillPartyStack",
+				"FillPartyRoster",
+				"FillParty"
+			};
+
+			var type = typeof(MobileParty);
+			foreach (var name in names)
+			{
+				var method = AccessTools.Method(type, name);
+				if (method != null)
+					return method;
+			}
+
+			var baseType = type.BaseType;
+			while (baseType != null)
+			{
+				foreach (var name in names)
+				{
+					var method = AccessTools.Method(baseType, name);
+					if (method != null)
+						return method;
+				}
+				baseType = baseType.BaseType;
+			}
+
+			return null;
 		}
 
 		private static void MobileParty_FillPartyStacks_Postfix(MobileParty __instance)

@@ -39,6 +39,6 @@ _Workshop/*.zip
 steam_appid.txt
 !_Workshop/steam_appid.txt
 _Workshop/WorkshopUpdate.xml
-
+steam_workshop_uploader.txt
 # app code
 .env
