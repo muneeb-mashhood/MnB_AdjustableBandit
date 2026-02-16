@@ -34,7 +34,8 @@ namespace AdjustableBandits
         NumberOfMaximumTroopCountForBossFightInHideoutFactor = 1.0f,
         SpawnPercentageForFirstFightInHideoutMission = 0.75f,
         NumberOfMinimumBanditTroopsInHideoutMission = 10,
-        PlayerMaximumTroopCountForHideoutMission = 10
+        PlayerMaximumTroopCountForHideoutSneakInMission = 20,
+        PlayerMaximumTroopCountForHideoutAssaultMission = 20
       },
       BanditPartySizeLimit = 20,
       EnableLogging = false
@@ -77,6 +78,8 @@ namespace AdjustableBandits
       public float? NumberOfMaximumTroopCountForBossFightInHideoutFactor { get; set; }
       public float? SpawnPercentageForFirstFightInHideoutMission { get; set; }
       public int? NumberOfMinimumBanditTroopsInHideoutMission { get; set; }
+      public int? PlayerMaximumTroopCountForHideoutSneakInMission { get; set; }
+      public int? PlayerMaximumTroopCountForHideoutAssaultMission { get; set; }
       public int? PlayerMaximumTroopCountForHideoutMission { get; set; }
     }
 
@@ -137,6 +140,8 @@ namespace AdjustableBandits
       public float? NumberOfMaximumTroopCountForBossFightInHideoutFactor { get; set; }
       public float? SpawnPercentageForFirstFightInHideoutMission { get; set; }
       public int? NumberOfMinimumBanditTroopsInHideoutMission { get; set; }
+      public int? PlayerMaximumTroopCountForHideoutSneakInMission { get; set; }
+      public int? PlayerMaximumTroopCountForHideoutAssaultMission { get; set; }
       public int? PlayerMaximumTroopCountForHideoutMission { get; set; }
 
       public bool? EnableLogging { get; set; }
@@ -354,7 +359,13 @@ namespace AdjustableBandits
       Apply(defaults.Hideout?.NumberOfMaximumTroopCountForBossFightInHideoutFactor, value => settings.NumberOfMaximumTroopCountForBossFightInHideoutFactor = value);
       Apply(defaults.Hideout?.SpawnPercentageForFirstFightInHideoutMission, value => settings.SpawnPercentageForFirstFightInHideoutMission = value);
       Apply(defaults.Hideout?.NumberOfMinimumBanditTroopsInHideoutMission, value => settings.NumberOfMinimumBanditTroopsInHideoutMission = value);
-      Apply(defaults.Hideout?.PlayerMaximumTroopCountForHideoutMission, value => settings.PlayerMaximumTroopCountForHideoutMission = value);
+
+      var hideoutSneakInTroopCount = defaults.Hideout?.PlayerMaximumTroopCountForHideoutSneakInMission;
+      var hideoutAssaultTroopCount = defaults.Hideout?.PlayerMaximumTroopCountForHideoutAssaultMission;
+      var legacyHideoutTroopCount = defaults.Hideout?.PlayerMaximumTroopCountForHideoutMission ?? defaults.PlayerMaximumTroopCountForHideoutMission;
+
+      Apply(hideoutSneakInTroopCount ?? legacyHideoutTroopCount, value => settings.PlayerMaximumTroopCountForHideoutSneakInMission = value);
+      Apply(hideoutAssaultTroopCount ?? legacyHideoutTroopCount, value => settings.PlayerMaximumTroopCountForHideoutAssaultMission = value);
 
       Apply(defaults.BanditMultiplier, value => settings.BanditMultiplier = value);
       Apply(defaults.DesertBanditMultiplier, value => settings.DesertBanditMultiplier = value);
@@ -398,7 +409,9 @@ namespace AdjustableBandits
       Apply(defaults.NumberOfMaximumTroopCountForBossFightInHideoutFactor, value => settings.NumberOfMaximumTroopCountForBossFightInHideoutFactor = value);
       Apply(defaults.SpawnPercentageForFirstFightInHideoutMission, value => settings.SpawnPercentageForFirstFightInHideoutMission = value);
       Apply(defaults.NumberOfMinimumBanditTroopsInHideoutMission, value => settings.NumberOfMinimumBanditTroopsInHideoutMission = value);
-      Apply(defaults.PlayerMaximumTroopCountForHideoutMission, value => settings.PlayerMaximumTroopCountForHideoutMission = value);
+      var legacyTopLevelHideoutTroopCount = defaults.PlayerMaximumTroopCountForHideoutMission;
+      Apply(legacyTopLevelHideoutTroopCount, value => settings.PlayerMaximumTroopCountForHideoutSneakInMission = value);
+      Apply(legacyTopLevelHideoutTroopCount, value => settings.PlayerMaximumTroopCountForHideoutAssaultMission = value);
 
       Apply(defaults.EnableLogging, value => settings.EnableLogging = value);
     }

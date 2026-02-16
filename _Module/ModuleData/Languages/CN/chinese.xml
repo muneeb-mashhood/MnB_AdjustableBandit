@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?><?xml version="1.0" encoding="utf-8"?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</base>	</strings>		<string id="adjban_text_BanditBonus" text="强盗加成" />		<string id="adjban_content_GetPartyDetails" text="获取详情" />		<string id="adjban_hint_GetPartyDetails" text="显示各强盗阵营队伍总数与平均规模，并写入详细日志。" />		<string id="adjban_name_GetPartyDetails" text="获取队伍详情" />		<string id="adjban_inquiryText_RemoveHideouts" text="是否移除所有巢穴？无法撤销！" />		<string id="adjban_inquiryTitle_RemoveHideouts" text="正在移除巢穴…" />		<string id="adjban_content_RemoveHideouts" text="移除巢穴" />		<string id="adjban_hint_RemoveHideouts" text="从当前游戏中移除所有巢穴，无法撤销！" />		<string id="adjban_name_RemoveHideouts" text="移除所有巢穴" />		<string id="adjban_no" text="否" />		<string id="adjban_yes" text="是" />		<string id="adjban_inquiryText_RemoveBandits" text="是否移除所有强盗队伍？无法撤销！" />		<string id="adjban_inquiryTitle_RemoveBandits" text="正在移除强盗…" />		<string id="adjban_content_RemoveBanditParties" text="移除强盗队伍" />		<string id="adjban_hint_RemoveBanditParties" text="从当前游戏中移除所有强盗队伍，无法撤销！" />		<string id="adjban_name_RemoveBanditParties" text="移除所有强盗队伍" />		<string id="adjban_content_ResetSettingsFromJsonDefaults" text="从 JSON 重置" />		<string id="adjban_hint_ResetSettingsFromJsonDefaults" text="从 ModuleData/adjustablebandits.defaults.json 加载并应用设置。重新打开 MCM 可查看更新后的数值。" />		<string id="adjban_name_ResetSettingsFromJsonDefaults" text="从 JSON 默认值重置设置" />		<string id="adjban_group_Actions" text="操作" />		<string id="adjban_hint_EnableLogging" text="将调试信息写入 %USERPROFILE%\\Documents\\Mount and Blade II Bannerlord\\Configs\\ModLogs\\AdjustableBandits.log。[默认：关闭]" />		<string id="adjban_name_EnableLogging" text="启用日志记录" />		<string id="adjban_hint_MaxPlayerTroopsHideoutAssaultMission" text="直接发起巢穴强攻时允许携带的玩家兵力上限。[默认：20]" />		<string id="adjban_name_MaxPlayerTroopsHideoutAssaultMission" text="巢穴强攻任务玩家兵力上限" />		<string id="adjban_hint_MaxPlayerTroopsHideoutSneakInMission" text="选择“潜入”时允许携带的玩家兵力上限。[默认：20]" />		<string id="adjban_name_MaxPlayerTroopsHideoutSneakInMission" text="巢穴潜入任务玩家兵力上限" />		<string id="adjban_hint_MinBanditTroopsHideoutMission" text="[默认：10]" />		<string id="adjban_format_Troops" text="0 名士兵" />		<string id="adjban_name_MinBanditTroopsHideoutMission" text="巢穴任务中强盗最小兵力" />		<string id="adjban_hint_SpawnPercFirstFight" text="首领战前在首战中刷新的兵力比例。[默认：75%]" />		<string id="adjban_name_SpawnPercFirstFight" text="首战刷新比例" />		<string id="adjban_hint_MaxTroopCountBossFight" text="巢穴首领战兵力上限倍率。设为 0 表示不限制。[默认：1.0]" />		<string id="adjban_name_MaxTroopCountBossFight" text="首领战最大兵力 - 倍率" />		<string id="adjban_hint_MaxTroopCountFirstFight" text="巢穴首战兵力上限倍率。设为 0 表示不限制。[默认：1.0]" />		<string id="adjban_name_MaxTroopCountFirstFight" text="首战最大兵力 - 倍率" />		<string id="adjban_hint_MaxPartiesInHideout" text="[默认：4]" />		<string id="adjban_name_MaxPartiesInHideout" text="巢穴内最大队伍数" />		<string id="adjban_hint_MaxPartiesAroundHideout" text="巢穴周围可游荡的强盗队伍最大数量。[默认：8]" />		<string id="adjban_name_MaxPartiesAroundHideout" text="巢穴周围最大队伍数" />		<string id="adjban_hint_MinPartiesToInfestHideout" text="[默认：2]" />		<string id="adjban_name_MinPartiesToInfestHideout" text="感染巢穴所需最小队伍数" />		<string id="adjban_hint_MaxHideoutsPerFaction" text="[默认：10]" />		<string id="adjban_name_MaxHideoutsPerFaction" text="每个阵营巢穴上限" />		<string id="adjban_hint_InitialHideoutsPerFaction" text="[默认：3]" />		<string id="adjban_format_Hideouts" text="0 个巢穴" />		<string id="adjban_name_InitialHideoutsPerFaction" text="每个阵营初始巢穴数" />		<string id="adjban_group_Hideouts" text="巢穴" />		<string id="adjban_hint_MinNumSouthernPirateParties" text="确保世界地图上至少存在该数量的南方海盗队伍。[默认：150]" />		<string id="adjban_name_MinNumSouthernPirateParties" text="南方海盗队伍最小数量" />		<string id="adjban_hint_MaxNumSouthernPirateParties" text="限制世界地图上南方海盗队伍总数。[默认：5]" />		<string id="adjban_name_MaxNumSouthernPirateParties" text="南方海盗队伍最大数量" />		<string id="adjban_hint_MinNumNorthernPirateParties" text="确保世界地图上至少存在该数量的北方海盗队伍。[默认：150]" />		<string id="adjban_name_MinNumNorthernPirateParties" text="北方海盗队伍最小数量" />		<string id="adjban_hint_MaxNumNorthernPirateParties" text="限制世界地图上北方海盗队伍总数。[默认：5]" />		<string id="adjban_name_MaxNumNorthernPirateParties" text="北方海盗队伍最大数量" />		<string id="adjban_hint_MinNumSeaRaiderParties" text="确保世界地图上至少存在该数量的海掠者队伍。[默认：150]" />		<string id="adjban_name_MinNumSeaRaiderParties" text="海掠者队伍最小数量" />		<string id="adjban_hint_MaxNumSeaRaiderParties" text="限制世界地图上海掠者队伍总数。[默认：5]" />		<string id="adjban_name_MaxNumSeaRaiderParties" text="海掠者队伍最大数量" />		<string id="adjban_hint_MinNumMountainBanditParties" text="确保世界地图上至少存在该数量的山地强盗队伍。[默认：150]" />		<string id="adjban_name_MinNumMountainBanditParties" text="山地强盗队伍最小数量" />		<string id="adjban_hint_MaxNumMountainBanditParties" text="限制世界地图上山地强盗队伍总数。[默认：5]" />		<string id="adjban_name_MaxNumMountainBanditParties" text="山地强盗队伍最大数量" />		<string id="adjban_hint_MinNumForestBanditParties" text="确保世界地图上至少存在该数量的森林强盗队伍。[默认：150]" />		<string id="adjban_name_MinNumForestBanditParties" text="森林强盗队伍最小数量" />		<string id="adjban_hint_MaxNumForestBanditParties" text="限制世界地图上森林强盗队伍总数。[默认：5]" />		<string id="adjban_name_MaxNumForestBanditParties" text="森林强盗队伍最大数量" />		<string id="adjban_hint_MinNumSteppeBanditParties" text="确保世界地图上至少存在该数量的草原强盗队伍。[默认：150]" />		<string id="adjban_name_MinNumSteppeBanditParties" text="草原强盗队伍最小数量" />		<string id="adjban_hint_MaxNumSteppeBanditParties" text="限制世界地图上草原强盗队伍总数。[默认：5]" />		<string id="adjban_name_MaxNumSteppeBanditParties" text="草原强盗队伍最大数量" />		<string id="adjban_hint_MinNumDesertBanditParties" text="确保世界地图上至少存在该数量的沙漠强盗队伍。[默认：150]" />		<string id="adjban_name_MinNumDesertBanditParties" text="沙漠强盗队伍最小数量" />		<string id="adjban_hint_MaxNumDesertBanditParties" text="限制世界地图上沙漠强盗队伍总数。[默认：5]" />		<string id="adjban_name_MaxNumDesertBanditParties" text="沙漠强盗队伍最大数量" />		<string id="adjban_hint_MaxNumBanditParties" text="限制其他强盗（不含劫匪、海掠者和海盗）在世界地图上的总数。[默认：5]" />		<string id="adjban_name_MaxNumBanditParties" text="强盗队伍最大数量（其他强盗）" />		<string id="adjban_hint_MinNumDeserterParties" text="确保世界地图上至少存在该数量的逃兵队伍。[默认：150]" />		<string id="adjban_name_MinNumDeserterParties" text="逃兵队伍最小数量" />		<string id="adjban_hint_MaxNumDeserterParties" text="限制世界地图上逃兵队伍总数。[默认：30]" />		<string id="adjban_name_MaxNumDeserterParties" text="逃兵队伍最大数量" />		<string id="adjban_hint_MinNumLooterParties" text="确保世界地图上至少存在该数量的劫匪队伍。[默认：150]" />		<string id="adjban_name_MinNumLooterParties" text="劫匪队伍最小数量" />		<string id="adjban_hint_MaxNumLooterParties" text="世界地图上劫匪队伍的最大数量。[默认：150]" />		<string id="adjban_format_Parties" text="0 支队伍" />		<string id="adjban_name_MaxNumLooterParties" text="劫匪队伍最大数量" />		<string id="adjban_hint_BanditPartySizeLimit" text="不会导致强盗逃散，但超过上限会降低队伍速度。提高上限可减少或消除惩罚，从而提升移动速度。超过上限时队伍会变慢。需要重新加载！[默认：20]" />		<string id="adjban_name_BanditPartySizeLimit" text="强盗队伍规模上限（影响移动速度）" />		<string id="adjban_hint_SouthernPirateMultiplier" text="调整南方海盗队伍规模。仅影响新生成的队伍。[默认：0.60]" />		<string id="adjban_name_SouthernPirateMultiplier" text="南方海盗规模倍率" />		<string id="adjban_hint_NorthernPirateMultiplier" text="调整北方海盗队伍规模。仅影响新生成的队伍。[默认：0.60]" />		<string id="adjban_name_NorthernPirateMultiplier" text="北方海盗规模倍率" />		<string id="adjban_hint_SeaRaiderMultiplier" text="调整海掠者队伍规模。仅影响新生成的队伍。[默认：0.60]" />		<string id="adjban_name_SeaRaiderMultiplier" text="海掠者规模倍率" />		<string id="adjban_hint_DeserterMultiplier" text="调整逃兵队伍规模。仅影响新生成的队伍。[默认：1.00]" />		<string id="adjban_name_DeserterMultiplier" text="逃兵队伍规模倍率" />		<string id="adjban_hint_LooterMultiplier" text="调整劫匪队伍规模。仅影响新生成的队伍。[默认：2.00]" />		<string id="adjban_name_LooterMultiplier" text="劫匪队伍规模倍率" />		<string id="adjban_hint_MountainBanditMultiplier" text="调整山地强盗队伍规模。仅影响新生成的队伍。[默认：0.60]" />		<string id="adjban_name_MountainBanditMultiplier" text="山地强盗规模倍率" />		<string id="adjban_hint_ForestBanditMultiplier" text="调整森林强盗队伍规模。仅影响新生成的队伍。[默认：0.60]" />		<string id="adjban_name_ForestBanditMultiplier" text="森林强盗规模倍率" />		<string id="adjban_hint_SteppeBanditMultiplier" text="调整草原强盗队伍规模。仅影响新生成的队伍。[默认：0.60]" />		<string id="adjban_name_SteppeBanditMultiplier" text="草原强盗规模倍率" />		<string id="adjban_hint_DesertBanditMultiplier" text="调整沙漠强盗队伍规模。仅影响新生成的队伍。[默认：0.60]" />		<string id="adjban_name_DesertBanditMultiplier" text="沙漠强盗规模倍率" />		<string id="adjban_hint_BanditPartySizeMultiplier" text="调整所有强盗队伍的规模。仅影响新生成的队伍。过高数值可能降低性能并影响游戏体验。[默认：1.00]" />		<string id="adjban_name_BanditPartySizeMultiplier" text="强盗队伍规模倍率" />		<string id="adjban_group_Logs" text="日志" />		<string id="adjban_group_Deserters" text="逃兵" />		<string id="adjban_group_SeaRaidersCorsairs" text="海掠者与海盗" />		<string id="adjban_group_Bandits" text="强盗" />		<string id="adjban_group_Looters" text="劫匪" />	<strings>	</tags>		<tag language="Chinese (Simplified)" />	<tags><base xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="string"><base
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="string">
+	<tags>
+		<tag language="Chinese (Simplified)" />
+	</tags>
+	<strings>
+		<string id="adjban_group_Looters" text="劫匪" />
+		<string id="adjban_group_Bandits" text="强盗" />
+		<string id="adjban_group_SeaRaidersCorsairs" text="海掠者与海盗" />
+		<string id="adjban_group_Deserters" text="逃兵" />
+		<string id="adjban_group_Logs" text="日志" />
+
+		<string id="adjban_name_BanditPartySizeMultiplier" text="强盗队伍规模倍率" />
+		<string id="adjban_hint_BanditPartySizeMultiplier" text="调整所有强盗队伍规模。仅影响新生成队伍。过高数值可能降低性能并影响游戏体验。[默认：1.00]" />
+		<string id="adjban_name_DesertBanditMultiplier" text="沙漠强盗队伍规模倍率" />
+		<string id="adjban_hint_DesertBanditMultiplier" text="调整沙漠强盗队伍规模。仅影响新生成队伍。[默认：0.60]" />
+		<string id="adjban_name_SteppeBanditMultiplier" text="草原强盗队伍规模倍率" />
+		<string id="adjban_hint_SteppeBanditMultiplier" text="调整草原强盗队伍规模。仅影响新生成队伍。[默认：0.60]" />
+		<string id="adjban_name_ForestBanditMultiplier" text="森林强盗队伍规模倍率" />
+		<string id="adjban_hint_ForestBanditMultiplier" text="调整森林强盗队伍规模。仅影响新生成队伍。[默认：0.60]" />
+		<string id="adjban_name_MountainBanditMultiplier" text="山地强盗队伍规模倍率" />
+		<string id="adjban_hint_MountainBanditMultiplier" text="调整山地强盗队伍规模。仅影响新生成队伍。[默认：0.60]" />
+		<string id="adjban_name_LooterMultiplier" text="劫匪队伍规模倍率" />
+		<string id="adjban_hint_LooterMultiplier" text="调整劫匪队伍规模。仅影响新生成队伍。[默认：2.00]" />
+		<string id="adjban_name_DeserterMultiplier" text="逃兵队伍规模倍率" />
+		<string id="adjban_hint_DeserterMultiplier" text="调整逃兵队伍规模。仅影响新生成队伍。[默认：1.00]" />
+		<string id="adjban_name_SeaRaiderMultiplier" text="海掠者队伍规模倍率" />
+		<string id="adjban_hint_SeaRaiderMultiplier" text="调整海掠者队伍规模。仅影响新生成队伍。[默认：0.60]" />
+		<string id="adjban_name_NorthernPirateMultiplier" text="北方海盗队伍规模倍率" />
+		<string id="adjban_hint_NorthernPirateMultiplier" text="调整北方海盗队伍规模。仅影响新生成队伍。[默认：0.60]" />
+		<string id="adjban_name_SouthernPirateMultiplier" text="南方海盗队伍规模倍率" />
+		<string id="adjban_hint_SouthernPirateMultiplier" text="调整南方海盗队伍规模。仅影响新生成队伍。[默认：0.60]" />
+
+		<string id="adjban_name_BanditPartySizeLimit" text="强盗队伍规模上限（影响移动速度）" />
+		<string id="adjban_hint_BanditPartySizeLimit" text="不会导致强盗逃散，但超过上限会降低队伍速度。提高上限可减少或消除惩罚。[默认：20]" />
+
+		<string id="adjban_name_MaxNumLooterParties" text="劫匪队伍最大数量" />
+		<string id="adjban_format_Parties" text="0 支队伍" />
+		<string id="adjban_hint_MaxNumLooterParties" text="限制世界地图上劫匪队伍总数。[默认：200]" />
+		<string id="adjban_name_MinNumLooterParties" text="劫匪队伍最小数量" />
+		<string id="adjban_hint_MinNumLooterParties" text="确保世界地图上至少存在该数量的劫匪队伍。[默认：150]" />
+		<string id="adjban_name_MaxNumDeserterParties" text="逃兵队伍最大数量" />
+		<string id="adjban_hint_MaxNumDeserterParties" text="限制世界地图上逃兵队伍总数。[默认：30]" />
+		<string id="adjban_name_MinNumDeserterParties" text="逃兵队伍最小数量" />
+		<string id="adjban_hint_MinNumDeserterParties" text="确保世界地图上至少存在该数量的逃兵队伍。[默认：150]" />
+		<string id="adjban_name_MaxNumBanditParties" text="其他强盗队伍最大数量" />
+		<string id="adjban_hint_MaxNumBanditParties" text="限制其他强盗（不含劫匪、海掠者和海盗）队伍总数。[默认：5]" />
+		<string id="adjban_name_MaxNumDesertBanditParties" text="沙漠强盗队伍最大数量" />
+		<string id="adjban_hint_MaxNumDesertBanditParties" text="限制世界地图上沙漠强盗队伍总数。[默认：5]" />
+		<string id="adjban_name_MinNumDesertBanditParties" text="沙漠强盗队伍最小数量" />
+		<string id="adjban_hint_MinNumDesertBanditParties" text="确保世界地图上至少存在该数量的沙漠强盗队伍。[默认：150]" />
+		<string id="adjban_name_MaxNumSteppeBanditParties" text="草原强盗队伍最大数量" />
+		<string id="adjban_hint_MaxNumSteppeBanditParties" text="限制世界地图上草原强盗队伍总数。[默认：5]" />
+		<string id="adjban_name_MinNumSteppeBanditParties" text="草原强盗队伍最小数量" />
+		<string id="adjban_hint_MinNumSteppeBanditParties" text="确保世界地图上至少存在该数量的草原强盗队伍。[默认：150]" />
+		<string id="adjban_name_MaxNumForestBanditParties" text="森林强盗队伍最大数量" />
+		<string id="adjban_hint_MaxNumForestBanditParties" text="限制世界地图上森林强盗队伍总数。[默认：5]" />
+		<string id="adjban_name_MinNumForestBanditParties" text="森林强盗队伍最小数量" />
+		<string id="adjban_hint_MinNumForestBanditParties" text="确保世界地图上至少存在该数量的森林强盗队伍。[默认：150]" />
+		<string id="adjban_name_MaxNumMountainBanditParties" text="山地强盗队伍最大数量" />
+		<string id="adjban_hint_MaxNumMountainBanditParties" text="限制世界地图上山地强盗队伍总数。[默认：5]" />
+		<string id="adjban_name_MinNumMountainBanditParties" text="山地强盗队伍最小数量" />
+		<string id="adjban_hint_MinNumMountainBanditParties" text="确保世界地图上至少存在该数量的山地强盗队伍。[默认：150]" />
+		<string id="adjban_name_MaxNumSeaRaiderParties" text="海掠者队伍最大数量" />
+		<string id="adjban_hint_MaxNumSeaRaiderParties" text="限制世界地图上海掠者队伍总数。[默认：5]" />
+		<string id="adjban_name_MinNumSeaRaiderParties" text="海掠者队伍最小数量" />
+		<string id="adjban_hint_MinNumSeaRaiderParties" text="确保世界地图上至少存在该数量的海掠者队伍。[默认：150]" />
+		<string id="adjban_name_MaxNumNorthernPirateParties" text="北方海盗队伍最大数量" />
+		<string id="adjban_hint_MaxNumNorthernPirateParties" text="限制世界地图上北方海盗队伍总数。[默认：5]" />
+		<string id="adjban_name_MinNumNorthernPirateParties" text="北方海盗队伍最小数量" />
+		<string id="adjban_hint_MinNumNorthernPirateParties" text="确保世界地图上至少存在该数量的北方海盗队伍。[默认：150]" />
+		<string id="adjban_name_MaxNumSouthernPirateParties" text="南方海盗队伍最大数量" />
+		<string id="adjban_hint_MaxNumSouthernPirateParties" text="限制世界地图上南方海盗队伍总数。[默认：5]" />
+		<string id="adjban_name_MinNumSouthernPirateParties" text="南方海盗队伍最小数量" />
+		<string id="adjban_hint_MinNumSouthernPirateParties" text="确保世界地图上至少存在该数量的南方海盗队伍。[默认：150]" />
+
+		<string id="adjban_group_Hideouts" text="巢穴" />
+		<string id="adjban_name_InitialHideoutsPerFaction" text="每个派系初始巢穴数量" />
+		<string id="adjban_format_Hideouts" text="0 个巢穴" />
+		<string id="adjban_hint_InitialHideoutsPerFaction" text="战役开始时每个强盗派系的巢穴数量。[默认：3]" />
+		<string id="adjban_name_MaxHideoutsPerFaction" text="每个派系巢穴最大数量" />
+		<string id="adjban_hint_MaxHideoutsPerFaction" text="每个强盗派系可拥有的巢穴上限。[默认：10]" />
+		<string id="adjban_name_MinPartiesToInfestHideout" text="巢穴滋生所需最少队伍数" />
+		<string id="adjban_hint_MinPartiesToInfestHideout" text="使巢穴被滋生所需的最少强盗队伍数。[默认：2]" />
+		<string id="adjban_name_MaxPartiesAroundHideout" text="巢穴周边队伍最大数量" />
+		<string id="adjban_hint_MaxPartiesAroundHideout" text="在巢穴周边游荡的强盗队伍最大数量。[默认：8]" />
+		<string id="adjban_name_MaxPartiesInHideout" text="巢穴内队伍最大数量" />
+		<string id="adjban_hint_MaxPartiesInHideout" text="巢穴内可存在的强盗队伍最大数量。[默认：4]" />
+		<string id="adjban_name_MaxTroopCountFirstFight" text="首战最大兵力 - 系数" />
+		<string id="adjban_hint_MaxTroopCountFirstFight" text="巢穴首战兵力上限倍率。设为 0 表示无限制。[默认：1.0]" />
+		<string id="adjban_name_MaxTroopCountBossFight" text="头目战最大兵力 - 系数" />
+		<string id="adjban_hint_MaxTroopCountBossFight" text="巢穴头目战兵力上限倍率。设为 0 表示无限制。[默认：1.0]" />
+		<string id="adjban_name_SpawnPercFirstFight" text="首战生成比例" />
+		<string id="adjban_hint_SpawnPercFirstFight" text="巢穴总兵力中在首战阶段刷新的比例。[默认：75%]" />
+		<string id="adjban_name_MinBanditTroopsHideoutMission" text="巢穴任务中强盗最小兵力" />
+		<string id="adjban_format_Troops" text="0 名士兵" />
+		<string id="adjban_hint_MinBanditTroopsHideoutMission" text="巢穴任务中敌军最小兵力。[默认：10]" />
+		<string id="adjban_name_MaxPlayerTroopsHideoutSneakInMission" text="巢穴潜入任务玩家最大兵力" />
+		<string id="adjban_hint_MaxPlayerTroopsHideoutSneakInMission" text="选择“潜入”时，玩家可携带的最大兵力。[默认：20]" />
+		<string id="adjban_name_MaxPlayerTroopsHideoutAssaultMission" text="巢穴强攻任务玩家最大兵力" />
+		<string id="adjban_hint_MaxPlayerTroopsHideoutAssaultMission" text="选择“强攻”时，玩家可携带的最大兵力。[默认：20]" />
+
+		<string id="adjban_name_EnableLogging" text="启用日志记录" />
+		<string id="adjban_hint_EnableLogging" text="将调试信息写入 %USERPROFILE%\\Documents\\Mount and Blade II Bannerlord\\Configs\\ModLogs\\AdjustableBandits.log。[默认：关闭]" />
+
+		<string id="adjban_group_Actions" text="操作" />
+		<string id="adjban_name_ResetSettingsFromJsonDefaults" text="从 JSON 重置设置" />
+		<string id="adjban_hint_ResetSettingsFromJsonDefaults" text="从 ModuleData/adjustablebandits.defaults.json 加载并应用设置，重新打开 MCM 后可看到更新值。" />
+		<string id="adjban_content_ResetSettingsFromJsonDefaults" text="从 JSON 重置" />
+		<string id="adjban_name_RemoveBanditParties" text="移除所有强盗队伍" />
+		<string id="adjban_hint_RemoveBanditParties" text="从当前游戏中移除所有强盗队伍，无法撤销！" />
+		<string id="adjban_content_RemoveBanditParties" text="移除强盗队伍" />
+		<string id="adjban_inquiryTitle_RemoveBandits" text="正在移除强盗…" />
+		<string id="adjban_inquiryText_RemoveBandits" text="是否移除所有强盗队伍？此操作无法撤销！" />
+		<string id="adjban_yes" text="是" />
+		<string id="adjban_no" text="否" />
+		<string id="adjban_name_RemoveHideouts" text="移除所有巢穴" />
+		<string id="adjban_hint_RemoveHideouts" text="从当前游戏中移除所有巢穴，无法撤销！" />
+		<string id="adjban_content_RemoveHideouts" text="移除巢穴" />
+		<string id="adjban_inquiryTitle_RemoveHideouts" text="正在移除巢穴…" />
+		<string id="adjban_inquiryText_RemoveHideouts" text="是否移除所有巢穴？此操作无法撤销！" />
+		<string id="adjban_name_GetPartyDetails" text="获取队伍详情" />
+		<string id="adjban_hint_GetPartyDetails" text="显示各强盗阵营队伍总数与平均规模，并将每支队伍规模写入日志。" />
+		<string id="adjban_content_GetPartyDetails" text="获取详情" />
+
+		<string id="adjban_text_BanditBonus" text="强盗加成" />
+	</strings>
+</base>

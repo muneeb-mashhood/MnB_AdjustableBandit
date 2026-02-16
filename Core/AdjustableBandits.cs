@@ -37,6 +37,7 @@ namespace AdjustableBandits
 		private static MethodInfo CreateLooterPartyMethod;
 		private static readonly HashSet<string> LoggedSpawnSignatures = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
 		private static readonly Random SpawnRandom = new Random();
+		private static bool triedLegacyDefaultsMigration;
 		private static readonly string LogPath = Path.Combine(
 			Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments),
 			"Mount and Blade II Bannerlord",
@@ -117,6 +118,7 @@ namespace AdjustableBandits
 			try
 			{
 				base.OnGameStart(game, gameStarterObject);
+				TryAutoApplyJsonDefaultsForLegacyFirstRun();
 				EnsureInitialized();
 				if (game.GameType is Campaign)
 				{
@@ -159,6 +161,7 @@ namespace AdjustableBandits
 
 			try
 			{
+				TryAutoApplyJsonDefaultsForLegacyFirstRun();
 				HarmonyPatches.Initialize();
 				isInitialized = true;
 			}
@@ -589,6 +592,66 @@ namespace AdjustableBandits
 			if (!LoggedSpawnSignatures.Add(signature))
 				return;
 			WriteLog($"minimums: {reason} '{signature}'");
+		}
+
+		private static void TryAutoApplyJsonDefaultsForLegacyFirstRun()
+		{
+			if (triedLegacyDefaultsMigration)
+				return;
+
+			try
+			{
+				var settings = GetSettings();
+				if (settings == null || object.ReferenceEquals(settings, FallbackSettings))
+					return;
+
+				triedLegacyDefaultsMigration = true;
+
+				if (!LooksLikeLegacyFirstRunDefaults(settings))
+					return;
+
+				if (ResetSettingsFromJson(out var message))
+				{
+					LogError($"defaults: auto-applied JSON defaults for legacy first-run settings. {message}");
+				}
+				else
+				{
+					LogError($"defaults: auto-apply of JSON defaults failed: {message}");
+				}
+			}
+			catch (Exception exc)
+			{
+				LogError($"defaults: auto-apply check failed: {exc}");
+			}
+		}
+
+		private static bool LooksLikeLegacyFirstRunDefaults(MCMSettings settings)
+		{
+			if (settings == null)
+				return false;
+
+			if (Math.Abs(settings.LooterMultiplier - 2f) > 0.0001f)
+				return false;
+
+			return
+				settings.NumberOfMinimumLooterParties == 150 &&
+				settings.NumberOfMinimumDeserterParties == 150 &&
+				settings.NumberOfMinimumDesertBanditParties == 150 &&
+				settings.NumberOfMinimumSteppeBanditParties == 150 &&
+				settings.NumberOfMinimumForestBanditParties == 150 &&
+				settings.NumberOfMinimumMountainBanditParties == 150 &&
+				settings.NumberOfMinimumSeaRaiderParties == 150 &&
+				settings.NumberOfMinimumNorthernPirateParties == 150 &&
+				settings.NumberOfMinimumSouthernPirateParties == 150 &&
+				settings.NumberOfMaximumLooterParties == 200 &&
+				settings.NumberOfMaximumDeserterParties == 30 &&
+				settings.NumberOfMaximumDesertBanditParties == 5 &&
+				settings.NumberOfMaximumSteppeBanditParties == 5 &&
+				settings.NumberOfMaximumForestBanditParties == 5 &&
+				settings.NumberOfMaximumMountainBanditParties == 5 &&
+				settings.NumberOfMaximumSeaRaiderParties == 5 &&
+				settings.NumberOfMaximumNorthernPirateParties == 5 &&
+				settings.NumberOfMaximumSouthernPirateParties == 5;
 		}
 
 		private static string BuildSignature(MethodInfo method)

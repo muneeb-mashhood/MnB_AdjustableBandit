@@ -87,6 +87,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="_Module\ModuleData\adjustablebandits.defaults.json" />
+    <Content Include="_Module\ModuleData\Languages\CN\chinese.xml" />
+    <Content Include="_Module\ModuleData\Languages\CN\language_data.xml" />
     <Content Include="_Module\ModuleData\Languages\DE\german.xml" />
     <Content Include="_Module\ModuleData\Languages\DE\language_data.xml" />
     <Content Include="_Module\ModuleData\Languages\english.xml" />

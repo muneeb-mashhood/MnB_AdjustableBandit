@@ -59,7 +59,8 @@
     "NumberOfMaximumTroopCountForBossFightInHideoutFactor": 1.0,
     "SpawnPercentageForFirstFightInHideoutMission": 0.75,
     "NumberOfMinimumBanditTroopsInHideoutMission": 10,
-    "PlayerMaximumTroopCountForHideoutMission": 10
+    "PlayerMaximumTroopCountForHideoutSneakInMission": 20,
+    "PlayerMaximumTroopCountForHideoutAssaultMission": 20
   },
   "BanditPartySizeLimit": 20,
   "EnableLogging": false

@@ -1,7 +1,15 @@
 # Changelog
 
+## 1.3.2.0 - 2026-02-14
+- Split hideout player troop cap into separate settings for Sneak-In and Assault missions.
+- Updated hideout mission limits to enforce mission-specific minimums (Sneak-In: 20, Assault: 8) with max 100.
+- Added backward-compatible defaults loading so legacy single hideout troop cap values migrate into both new settings.
+- Completed MCM localization key coverage and cleanup for English and German, including key ordering to match MCM display sequence.
+- Added Simplified Chinese localization under `ModuleData/Languages/CN` with language metadata and key parity.
+
 ## 1.3.1.0 - 2026-02-13
 - Added grouped JSON defaults support (`ModuleData/adjustablebandits.defaults.json`) and MCM "Reset from JSON" action.
+- Added guarded first-run auto-migration: when settings match legacy built-in defaults (e.g., minimum party counts of 150), JSON defaults are auto-applied.
 - Reset applies defaults only when the button is clicked and saves immediately.
 - Added guidance to reopen MCM after reset to view refreshed values.
 - Added minimum party enforcement behavior and expanded separate pirate controls (Sea Raider, Northern Pirate, Southern Pirate).

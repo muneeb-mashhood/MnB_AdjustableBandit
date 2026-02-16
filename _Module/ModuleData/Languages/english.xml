@@ -1,177 +1,125 @@
 <?xml version="1.0" encoding="utf-8"?>
-<base xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="string">
+<base
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="string">
 	<tags>
 		<tag language="English" />
 	</tags>
 	<strings>
-			
-		<!-- SETTINGS -->
-		
-		<string 
-			id="adjban_group_GeneralSettings" 
-			text="General Settings" />
-		<string 
-			id="adjban_group_BanditPopulation" 
-			text="Bandit Population" />
-		<string 
-			id="adjban_group_Hideouts" 
-			text="Hideouts" />
-    <string
-			id="adjban_group_Actions"
-			text="Actions" />
-		
-		<string 
-			id="adjban_name_BanditPartySizeMultiplier" 
-			text="Bandit Party Size Multiplier" />
-		<string 
-			id="adjban_hint_BanditPartySizeMultiplier" 
-			text="Adjusts the size of all bandit parties. Only newly spawned parties are affected. High values may decrease performance and may have negative influence on game experience. [Default: 1.00]" />
-			
-		<string 
-			id="adjban_name_BanditPartySizeLimit" 
-			text="Bandit Party Size Limit (affects Movement Speed)" />
-		<string 
-			id="adjban_hint_BanditPartySizeLimit" 
-			text="While it does not make the bandit party's troops desert, being over the limit slows down the party. A higher limit lessens or removes the malus, increasing movement speed. (The party slows down if it has more troops than the size limit.) Requires reloading! [Default: 20]" />
-			
-		<string 
-			id="adjban_name_MaxNumLooterParties" 
-			text="Maximum Number of Looter Parties" />
-		<string 
-			id="adjban_hint_MaxNumLooterParties" 
-			text="Maximum number of looter parties on the entire world map. [Default: 150]" />
-			
-		<string 
-			id="adjban_name_MaxPartiesAroundHideout" 
-			text="Maximum Parties around Hideout" />
-		<string 
-			id="adjban_hint_MaxPartiesAroundHideout" 
-			text="Maximum number of faction-parties around hideouts. [Default: 8]" />
-			
-		<string 
-			id="adjban_name_InitialHideoutsPerFaction" 
-			text="Initial Hideouts per Faction" />
-		<string 
-			id="adjban_hint_InitialHideoutsPerFaction" 
-			text="[Default: 3]" />
-			
-		<string 
-			id="adjban_name_MaxHideoutsPerFaction" 
-			text="Maximum Hideouts per Faction" />
-		<string 
-			id="adjban_hint_MaxHideoutsPerFaction" 
-			text="[Default: 10]" />
-			
-		<string 
-			id="adjban_name_MinPartiesToInfestHideout" 
-			text="Minimum Parties to Infest Hideout" />
-		<string 
-			id="adjban_hint_MinPartiesToInfestHideout" 
-			text="[Default: 2]" />
-			
-		<string 
-			id="adjban_name_MaxPartiesInHideout" 
-			text="Maximum Parties in Hideout" />
-		<string 
-			id="adjban_hint_MaxPartiesInHideout" 
-			text="[Default: 4]" />
-			
-		<string 
-			id="adjban_name_MaxTroopCountFirstFight" 
-			text="Maximum Troop Count in First Fight - Factor" />
-		<string 
-			id="adjban_hint_MaxTroopCountFirstFight" 
-			text="Actual count depends on number of troops in hideout and player progress (lowest maximum is 12 with player progress at 0). Set to 0 for unlimited. [Default: 1.0]" />
-			
-		<string 
-			id="adjban_name_MaxTroopCountBossFight" 
-			text="Maximum Troop Count in Boss Fight - Factor" />
-		<string 
-			id="adjban_hint_MaxTroopCountBossFight" 
-			text="Actual count depends on number of troops in hideout and player progress (lowest maximum is 6 with player progress at 0). Set to 0 for unlimited. [Default: 1.0]" />
-			
-		<string 
-			id="adjban_name_SpawnPercFirstFight" 
-			text="Spawn Percentage in First Fight" />
-		<string 
-			id="adjban_hint_SpawnPercFirstFight" 
-			text="Percentage of troops to be spawned in the initial fight before the boss battle. [Default: 75%]" />
-			
-		<string 
-			id="adjban_name_MinBanditTroopsHideoutMission" 
-			text="Minimum Bandit Troops in Hideout Mission" />
-		<string 
-			id="adjban_hint_MinBanditTroopsHideoutMission" 
-			text="[Default: 10]" />
-			
-		<string 
-			id="adjban_name_MaxPlayerTroopsHideoutMission" 
-			text="Maximum Player Troops in Hideout Mission" />
-		<string 
-			id="adjban_hint_MaxPlayerTroopsHideoutMission" 
-			text="[Default: 10]" />
-
-    <string
-			id="adjban_name_RemoveBanditParties"
-			text="Remove all bandit parties" />
-    <string
-			id="adjban_hint_RemoveBanditParties"
-			text="Removes all bandit parties from the current game, this cannot be undone!" />
-    <string
-			id="adjban_content_RemoveBanditParties"
-			text="Remove bandit parties" />
-    
-    <string
-			id="adjban_inquiryTitle_RemoveBandits"
-			text="Removing Bandits..." />
-    <string
-			id="adjban_inquiryText_RemoveBandits"
-			text="Remove all bandit parties?
+		<string id="adjban_group_Looters" text="Looters" />
+		<string id="adjban_group_Bandits" text="Bandits" />
+		<string id="adjban_group_SeaRaidersCorsairs" text="Sea Raiders &amp; Pirates" />
+		<string id="adjban_group_Deserters" text="Deserters" />
+		<string id="adjban_group_Logs" text="Logs" />
+		<string id="adjban_name_BanditPartySizeMultiplier" text="Bandit Party Size Multiplier" />
+		<string id="adjban_hint_BanditPartySizeMultiplier" text="Adjusts the size of all bandit parties. Only newly spawned parties are affected. High values may decrease performance and may have negative influence on game experience. [Default: 1.00]" />
+		<string id="adjban_name_DesertBanditMultiplier" text="Desert Bandit Party Size Multiplier" />
+		<string id="adjban_hint_DesertBanditMultiplier" text="Scales desert bandit party sizes. Applies to newly spawned parties. [Default: 0.60]" />
+		<string id="adjban_name_SteppeBanditMultiplier" text="Steppe Bandit Party Size Multiplier" />
+		<string id="adjban_hint_SteppeBanditMultiplier" text="Scales steppe bandit party sizes. Applies to newly spawned parties. [Default: 0.60]" />
+		<string id="adjban_name_ForestBanditMultiplier" text="Forest Bandit Party Size Multiplier" />
+		<string id="adjban_hint_ForestBanditMultiplier" text="Scales forest bandit party sizes. Applies to newly spawned parties. [Default: 0.60]" />
+		<string id="adjban_name_MountainBanditMultiplier" text="Mountain Bandit Party Size Multiplier" />
+		<string id="adjban_hint_MountainBanditMultiplier" text="Scales mountain bandit party sizes. Applies to newly spawned parties. [Default: 0.60]" />
+		<string id="adjban_name_LooterMultiplier" text="Looter Party Size Multiplier" />
+		<string id="adjban_hint_LooterMultiplier" text="Scales looter party sizes. Applies to newly spawned parties. [Default: 2.00]" />
+		<string id="adjban_name_DeserterMultiplier" text="Deserter Party Size Multiplier" />
+		<string id="adjban_hint_DeserterMultiplier" text="Scales deserter party sizes. Applies to newly spawned parties. [Default: 1.00]" />
+		<string id="adjban_name_SeaRaiderMultiplier" text="Sea Raider Party Size Multiplier" />
+		<string id="adjban_hint_SeaRaiderMultiplier" text="Scales sea raider party sizes. Applies to newly spawned parties. [Default: 0.60]" />
+		<string id="adjban_name_NorthernPirateMultiplier" text="Northern Pirate Party Size Multiplier" />
+		<string id="adjban_hint_NorthernPirateMultiplier" text="Scales northern pirate party sizes. Applies to newly spawned parties. [Default: 0.60]" />
+		<string id="adjban_name_SouthernPirateMultiplier" text="Southern Pirate Party Size Multiplier" />
+		<string id="adjban_hint_SouthernPirateMultiplier" text="Scales southern pirate party sizes. Applies to newly spawned parties. [Default: 0.60]" />
+		<string id="adjban_name_BanditPartySizeLimit" text="Bandit Party Size Limit (affects Movement Speed)" />
+		<string id="adjban_hint_BanditPartySizeLimit" text="While it does not make the bandit party's troops desert, being over the limit slows down the party. A higher limit lessens or removes the malus, increasing movement speed. (The party slows down if it has more troops than the size limit.) Requires reloading! [Default: 20]" />
+		<string id="adjban_name_MaxNumLooterParties" text="Maximum Number of Looter Parties" />
+		<string id="adjban_format_Parties" text="0 Parties" />
+		<string id="adjban_hint_MaxNumLooterParties" text="Maximum number of looter parties on the entire world map. [Default: 150]" />
+		<string id="adjban_name_MinNumLooterParties" text="Minimum Number of Looter Parties" />
+		<string id="adjban_hint_MinNumLooterParties" text="Ensures at least this many looter parties exist on the world map. [Default: 150]" />
+		<string id="adjban_name_MaxNumDeserterParties" text="Maximum Number of Deserter Parties" />
+		<string id="adjban_hint_MaxNumDeserterParties" text="Caps total deserter parties on the world map. [Default: 30]" />
+		<string id="adjban_name_MinNumDeserterParties" text="Minimum Number of Deserter Parties" />
+		<string id="adjban_hint_MinNumDeserterParties" text="Ensures at least this many deserter parties exist on the world map. [Default: 150]" />
+		<string id="adjban_name_MaxNumBanditParties" text="Maximum Number of Bandit Parties (other bandits)" />
+		<string id="adjban_hint_MaxNumBanditParties" text="Caps total other bandit parties (not looters, sea raiders, or pirates). [Default: 5]" />
+		<string id="adjban_name_MaxNumDesertBanditParties" text="Maximum Number of Desert Bandit Parties" />
+		<string id="adjban_hint_MaxNumDesertBanditParties" text="Caps total desert bandit parties on the world map. [Default: 5]" />
+		<string id="adjban_name_MinNumDesertBanditParties" text="Minimum Number of Desert Bandit Parties" />
+		<string id="adjban_hint_MinNumDesertBanditParties" text="Ensures at least this many desert bandit parties exist on the world map. [Default: 150]" />
+		<string id="adjban_name_MaxNumSteppeBanditParties" text="Maximum Number of Steppe Bandit Parties" />
+		<string id="adjban_hint_MaxNumSteppeBanditParties" text="Caps total steppe bandit parties on the world map. [Default: 5]" />
+		<string id="adjban_name_MinNumSteppeBanditParties" text="Minimum Number of Steppe Bandit Parties" />
+		<string id="adjban_hint_MinNumSteppeBanditParties" text="Ensures at least this many steppe bandit parties exist on the world map. [Default: 150]" />
+		<string id="adjban_name_MaxNumForestBanditParties" text="Maximum Number of Forest Bandit Parties" />
+		<string id="adjban_hint_MaxNumForestBanditParties" text="Caps total forest bandit parties on the world map. [Default: 5]" />
+		<string id="adjban_name_MinNumForestBanditParties" text="Minimum Number of Forest Bandit Parties" />
+		<string id="adjban_hint_MinNumForestBanditParties" text="Ensures at least this many forest bandit parties exist on the world map. [Default: 150]" />
+		<string id="adjban_name_MaxNumMountainBanditParties" text="Maximum Number of Mountain Bandit Parties" />
+		<string id="adjban_hint_MaxNumMountainBanditParties" text="Caps total mountain bandit parties on the world map. [Default: 5]" />
+		<string id="adjban_name_MinNumMountainBanditParties" text="Minimum Number of Mountain Bandit Parties" />
+		<string id="adjban_hint_MinNumMountainBanditParties" text="Ensures at least this many mountain bandit parties exist on the world map. [Default: 150]" />
+		<string id="adjban_name_MaxNumSeaRaiderParties" text="Maximum Number of Sea Raider Parties" />
+		<string id="adjban_hint_MaxNumSeaRaiderParties" text="Caps total sea raider parties on the world map. [Default: 5]" />
+		<string id="adjban_name_MinNumSeaRaiderParties" text="Minimum Number of Sea Raider Parties" />
+		<string id="adjban_hint_MinNumSeaRaiderParties" text="Ensures at least this many sea raider parties exist on the world map. [Default: 150]" />
+		<string id="adjban_name_MaxNumNorthernPirateParties" text="Maximum Number of Northern Pirate Parties" />
+		<string id="adjban_hint_MaxNumNorthernPirateParties" text="Caps total northern pirate parties on the world map. [Default: 5]" />
+		<string id="adjban_name_MinNumNorthernPirateParties" text="Minimum Number of Northern Pirate Parties" />
+		<string id="adjban_hint_MinNumNorthernPirateParties" text="Ensures at least this many northern pirate parties exist on the world map. [Default: 150]" />
+		<string id="adjban_name_MaxNumSouthernPirateParties" text="Maximum Number of Southern Pirate Parties" />
+		<string id="adjban_hint_MaxNumSouthernPirateParties" text="Caps total southern pirate parties on the world map. [Default: 5]" />
+		<string id="adjban_name_MinNumSouthernPirateParties" text="Minimum Number of Southern Pirate Parties" />
+		<string id="adjban_hint_MinNumSouthernPirateParties" text="Ensures at least this many southern pirate parties exist on the world map. [Default: 150]" />
+		<string id="adjban_group_Hideouts" text="Hideouts" />
+		<string id="adjban_name_InitialHideoutsPerFaction" text="Initial Hideouts per Faction" />
+		<string id="adjban_format_Hideouts" text="0 Hideouts" />
+		<string id="adjban_hint_InitialHideoutsPerFaction" text="[Default: 3]" />
+		<string id="adjban_name_MaxHideoutsPerFaction" text="Maximum Hideouts per Faction" />
+		<string id="adjban_hint_MaxHideoutsPerFaction" text="[Default: 10]" />
+		<string id="adjban_name_MinPartiesToInfestHideout" text="Minimum Parties to Infest Hideout" />
+		<string id="adjban_hint_MinPartiesToInfestHideout" text="[Default: 2]" />
+		<string id="adjban_name_MaxPartiesAroundHideout" text="Maximum Parties around Hideout" />
+		<string id="adjban_hint_MaxPartiesAroundHideout" text="Maximum number of faction-parties around hideouts. [Default: 8]" />
+		<string id="adjban_name_MaxPartiesInHideout" text="Maximum Parties in Hideout" />
+		<string id="adjban_hint_MaxPartiesInHideout" text="[Default: 4]" />
+		<string id="adjban_name_MaxTroopCountFirstFight" text="Maximum Troop Count in First Fight - Factor" />
+		<string id="adjban_hint_MaxTroopCountFirstFight" text="Actual count depends on number of troops in hideout and player progress (lowest maximum is 12 with player progress at 0). Set to 0 for unlimited. [Default: 1.0]" />
+		<string id="adjban_name_MaxTroopCountBossFight" text="Maximum Troop Count in Boss Fight - Factor" />
+		<string id="adjban_hint_MaxTroopCountBossFight" text="Actual count depends on number of troops in hideout and player progress (lowest maximum is 6 with player progress at 0). Set to 0 for unlimited. [Default: 1.0]" />
+		<string id="adjban_name_SpawnPercFirstFight" text="Spawn Percentage in First Fight" />
+		<string id="adjban_hint_SpawnPercFirstFight" text="Percentage of troops to be spawned in the initial fight before the boss battle. [Default: 75%]" />
+		<string id="adjban_name_MinBanditTroopsHideoutMission" text="Minimum Bandit Troops in Hideout Mission" />
+		<string id="adjban_format_Troops" text="0 Troops" />
+		<string id="adjban_hint_MinBanditTroopsHideoutMission" text="[Default: 10]" />
+		<string id="adjban_name_MaxPlayerTroopsHideoutSneakInMission" text="Maximum Player Troops in Hideout Sneak-In Mission" />
+		<string id="adjban_hint_MaxPlayerTroopsHideoutSneakInMission" text="Maximum player troops allowed when selecting Sneak In for a hideout mission. [Default: 20]" />
+		<string id="adjban_name_MaxPlayerTroopsHideoutAssaultMission" text="Maximum Player Troops in Hideout Assault Mission" />
+		<string id="adjban_hint_MaxPlayerTroopsHideoutAssaultMission" text="Maximum player troops allowed when launching a direct hideout assault. [Default: 20]" />
+		<string id="adjban_name_EnableLogging" text="Enable Logging" />
+		<string id="adjban_hint_EnableLogging" text="Writes debug info to %USERPROFILE%\Documents\Mount and Blade II Bannerlord\Configs\ModLogs\AdjustableBandits.log. [Default: Off]" />
+		<string id="adjban_group_Actions" text="Actions" />
+		<string id="adjban_name_ResetSettingsFromJsonDefaults" text="Reset settings from defaults JSON" />
+		<string id="adjban_hint_ResetSettingsFromJsonDefaults" text="Loads values from ModuleData/adjustablebandits.defaults.json and applies them. Reopen MCM to view refreshed values." />
+		<string id="adjban_content_ResetSettingsFromJsonDefaults" text="Reset from JSON" />
+		<string id="adjban_name_RemoveBanditParties" text="Remove all bandit parties" />
+		<string id="adjban_hint_RemoveBanditParties" text="Removes all bandit parties from the current game, this cannot be undone!" />
+		<string id="adjban_content_RemoveBanditParties" text="Remove bandit parties" />
+		<string id="adjban_inquiryTitle_RemoveBandits" text="Removing Bandits..." />
+		<string id="adjban_inquiryText_RemoveBandits" text="Remove all bandit parties? 
       This cannot be undone!" />
-    
-    <string
-			id="adjban_yes"
-			text="Yes" />
-    <string
-			id="adjban_no"
-			text="No" />
-
-    <string
-			id="adjban_name_RemoveHideouts"
-			text="Remove all hideouts" />
-    <string
-			id="adjban_hint_RemoveHideouts"
-			text="Removes all hideouts from the current game, this cannot be undone!" />
-    <string
-			id="adjban_content_RemoveHideouts"
-			text="Remove hideouts" />
-
-    <string
-			id="adjban_inquiryTitle_RemoveHideouts"
-			text="Removing Hideouts..." />
-    <string
-			id="adjban_inquiryText_RemoveHideouts"
-			text="Remove all hideouts?
+		<string id="adjban_yes" text="Yes" />
+		<string id="adjban_no" text="No" />
+		<string id="adjban_name_RemoveHideouts" text="Remove all hideouts" />
+		<string id="adjban_hint_RemoveHideouts" text="Removes all hideouts from the current game, this cannot be undone!" />
+		<string id="adjban_content_RemoveHideouts" text="Remove hideouts" />
+		<string id="adjban_inquiryTitle_RemoveHideouts" text="Removing Hideouts..." />
+		<string id="adjban_inquiryText_RemoveHideouts" text="Remove all hideouts?
       This cannot be undone!" />
-    
-
-    <!-- FORMAT -->
-			
-		<string 
-			id="adjban_format_Parties" 
-			text="0 Parties" />
-		<string 
-			id="adjban_format_Hideouts" 
-			text="0 Hideouts" />
-		<string 
-			id="adjban_format_Troops" 
-			text="0 Troops" />
-			
-		<!-- OTHER -->
-			
-		<string 
-			id="adjban_text_BanditBonus" 
-			text="Bandit Bonus" />
-			
+		<string id="adjban_name_GetPartyDetails" text="Get Party Details" />
+		<string id="adjban_hint_GetPartyDetails" text="Shows total parties and average size per bandit faction; logs every party with its size." />
+		<string id="adjban_content_GetPartyDetails" text="Get Party Details" />
+		<string id="adjban_text_BanditBonus" text="Bandit Bonus" />
 	</strings>
 </base>

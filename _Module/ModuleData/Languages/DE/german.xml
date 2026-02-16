@@ -1,176 +1,125 @@
 <?xml version="1.0" encoding="utf-8"?>
-<base xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="string">
+<base
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="string">
 	<tags>
 		<tag language="Deutsch" />
 	</tags>
 	<strings>
-			
-		<!-- SETTINGS-->
-		
-		<string 
-			id="adjban_group_GeneralSettings" 
-			text="Generelle Einstellungen" />
-		<string 
-			id="adjban_group_BanditPopulation" 
-			text="Banditen Population" />
-		<string 
-			id="adjban_group_Hideouts" 
-			text="Verstecke" />
-    <string
-			id="adjban_group_Actions"
-			text="Aktionen" />
-		
-		<string 
-			id="adjban_name_BanditPartySizeMultiplier" 
-			text="Banditen Truppgrößen-Multiplikator" />
-		<string 
-			id="adjban_hint_BanditPartySizeMultiplier" 
-			text="Passt die Größe aller Banditen Trupps an. Gilt nur für neu generierte Trupps. Große Trupps können negative Auswirkung auf die Spiel-Performance haben. [Standard: 1.00]" />
-			
-		<string 
-			id="adjban_name_BanditPartySizeLimit" 
-			text="Banditen Truppgrößenlimit (beeinflusst Truppgeschwindigkeit)" />
-		<string 
-			id="adjban_hint_BanditPartySizeLimit" 
-			text="Banditen Truppen desertieren nicht, jedoch verringert sich die Geschwindigkeit der Truppe wenn sie über dem Limit ist. Ein höheres Limit erhöht daher die Geschwindigkeit großer Trupps. (Ein Trupp wird langsamer, wenn er mehr Truppen als das Limit hat.) Änderung wird erst nach erneutem Laden des Spielstands wirksam! [Standard: 20]" />
-			
-		<string 
-			id="adjban_name_MaxNumLooterParties" 
-			text="Maximale Anzahl an Plünderer Trupps" />
-		<string 
-			id="adjban_hint_MaxNumLooterParties" 
-			text="Maximale Anzahl an Plünderer Trupps auf der gesamten Weltkarte. [Standard: 150]" />
-			
-		<string 
-			id="adjban_name_MaxPartiesAroundHideout" 
-			text="Maximale Anzahl an Trupps um Verstecke" />
-		<string 
-			id="adjban_hint_MaxPartiesAroundHideout" 
-			text="Maximale Anzahl an Fraktions-Trupps in der Umgebung von Verstecken. [Standard: 8]" />
-			
-		<string 
-			id="adjban_name_InitialHideoutsPerFaction" 
-			text="Anfängliche Anzahl an Verstecken pro Fraktion" />
-		<string 
-			id="adjban_hint_InitialHideoutsPerFaction" 
-			text="[Standard: 3]" />
-			
-		<string 
-			id="adjban_name_MaxHideoutsPerFaction" 
-			text="Maximale Anzahl an Verstecken pro Fraktion" />
-		<string 
-			id="adjban_hint_MaxHideoutsPerFaction" 
-			text="[Standard: 10]" />
-			
-		<string 
-			id="adjban_name_MinPartiesToInfestHideout" 
-			text="Mindestanzahl an Trupps um Versteck zu bevölkern" />
-		<string 
-			id="adjban_hint_MinPartiesToInfestHideout" 
-			text="[Standard: 2]" />
-			
-		<string 
-			id="adjban_name_MaxPartiesInHideout" 
-			text="Maximale Anzahl an Trupps in Versteck" />
-		<string 
-			id="adjban_hint_MaxPartiesInHideout" 
-			text="[Standard: 4]" />
-			
-		<string 
-			id="adjban_name_MaxTroopCountFirstFight" 
-			text="Maximale Anzahl an Truppen im Versteck-Kampf - Faktor" />
-		<string 
-			id="adjban_hint_MaxTroopCountFirstFight" 
-			text="Tatsächliche Anzahl ist abhängig von der Anzahl der Truppen im Versteck und dem Fortschritt des Spielers (niedrigste Anzahl ist 12, bei Spieler-Fortschritt von 0). Der Wert 0 deaktiviert das Limit. [Standard: 1.0]" />
-			
-		<string 
-			id="adjban_name_MaxTroopCountBossFight" 
-			text="Maximale Anzahl an Truppen im Boss-Kampf - Faktor" />
-		<string 
-			id="adjban_hint_MaxTroopCountBossFight" 
-			text="Tatsächliche Anzahl ist abhängig von der Anzahl der Truppen im Versteck und dem Fortschritt des Spielers (niedrigste Anzahl ist 6, bei Spieler-Fortschritt von 0). Der Wert 0 deaktiviert das Limit. [Standard: 1.0]" />
-			
-		<string 
-			id="adjban_name_SpawnPercFirstFight" 
-			text="Spawn-Anteil im Versteck-Kampf" />
-		<string 
-			id="adjban_hint_SpawnPercFirstFight" 
-			text="Anteil der Truppen welche im Kampf durch das Versteck spawnen, vor dem Boss-Kampf. [Standard: 75%]" />
-			
-		<string 
-			id="adjban_name_MinBanditTroopsHideoutMission" 
-			text="Mindestanzahl an Banditen Truppen in Versteck-Missionen" />
-		<string 
-			id="adjban_hint_MinBanditTroopsHideoutMission" 
-			text="[Standard: 10]" />
-			
-		<string 
-			id="adjban_name_MaxPlayerTroopsHideoutMission" 
-			text="Maximale Anzahl an Spieler Truppen in Versteck-Missionen" />
-		<string 
-			id="adjban_hint_MaxPlayerTroopsHideoutMission" 
-			text="[Standard: 10]" />
-
-    <string
-			id="adjban_name_RemoveBanditParties"
-			text="Entferne alle Banditen-Trupps" />
-    <string
-			id="adjban_hint_RemoveBanditParties"
-			text="Entfernt alle Banditen-Trupps im laufenden Spiel; kann nicht rückgängig gemacht werden!" />
-    <string
-			id="adjban_content_RemoveBanditParties"
-			text="Entferne Banditen-Trupps" />
-
-    <string
-			id="adjban_inquiryTitle_RemoveBandits"
-			text="Banditen-Trupps entfernen..." />
-    <string
-			id="adjban_inquiryText_RemoveBandits"
-			text="Alle Banditen-Trupps entfernen?
-      Kann nicht rückgängig gemacht werden!" />
-
-    <string
-			id="adjban_yes"
-			text="Ja" />
-    <string
-			id="adjban_no"
-			text="Nein" />
-
-    <string
-			id="adjban_name_RemoveHideouts"
-			text="Entferne alle Verstecke" />
-    <string
-			id="adjban_hint_RemoveHideouts"
-			text="Entfernt alle Verstecke im laufenden Spiel; kann nicht rückgängig gemacht werden!" />
-    <string
-			id="adjban_content_RemoveHideouts"
-			text="Entferne Verstecke" />
-
-    <string
-			id="adjban_inquiryTitle_RemoveHideouts"
-			text="Verstecke entfernen..." />
-    <string
-			id="adjban_inquiryText_RemoveHideouts"
-			text="Alle Verstecke entfernen?
-      Kann nicht rückgängig gemacht werden!" />
-			
-		<!-- FORMAT -->
-			
-		<string 
-			id="adjban_format_Parties" 
-			text="0 Trupps" />
-		<string 
-			id="adjban_format_Hideouts" 
-			text="0 Verstecke" />
-		<string 
-			id="adjban_format_Troops" 
-			text="0 Truppen" />
-			
-		<!-- OTHER -->
-			
-		<string 
-			id="adjban_text_BanditBonus" 
-			text="Banditen Bonus" />
-			
+		<string id="adjban_group_Looters" text="PlÃƒÂ¼nderer" />
+		<string id="adjban_group_Bandits" text="Banditen" />
+		<string id="adjban_group_SeaRaidersCorsairs" text="SeerÃƒÂ¤uber &amp; Piraten" />
+		<string id="adjban_group_Deserters" text="Deserteure" />
+		<string id="adjban_group_Logs" text="Protokolle" />
+		<string id="adjban_name_BanditPartySizeMultiplier" text="Banditen TruppgrÃƒÂ¶ÃƒÅ¸en-Multiplikator" />
+		<string id="adjban_hint_BanditPartySizeMultiplier" text="Passt die GrÃƒÂ¶ÃƒÅ¸e aller Banditen Trupps an. Gilt nur fÃƒÂ¼r neu generierte Trupps. GroÃƒÅ¸e Trupps kÃƒÂ¶nnen negative Auswirkung auf die Spiel-Performance haben. [Standard: 1.00]" />
+		<string id="adjban_name_DesertBanditMultiplier" text="WÃƒÂ¼stenbanditen TruppgrÃƒÂ¶ÃƒÅ¸en-Multiplikator" />
+		<string id="adjban_hint_DesertBanditMultiplier" text="Skaliert die GrÃƒÂ¶ÃƒÅ¸e von WÃƒÂ¼stenbanditen-Trupps. Gilt fÃƒÂ¼r neu erzeugte Trupps. [Standard: 0.60]" />
+		<string id="adjban_name_SteppeBanditMultiplier" text="Steppenbanditen TruppgrÃƒÂ¶ÃƒÅ¸en-Multiplikator" />
+		<string id="adjban_hint_SteppeBanditMultiplier" text="Skaliert die GrÃƒÂ¶ÃƒÅ¸e von Steppenbanditen-Trupps. Gilt fÃƒÂ¼r neu erzeugte Trupps. [Standard: 0.60]" />
+		<string id="adjban_name_ForestBanditMultiplier" text="Waldbanditen TruppgrÃƒÂ¶ÃƒÅ¸en-Multiplikator" />
+		<string id="adjban_hint_ForestBanditMultiplier" text="Skaliert die GrÃƒÂ¶ÃƒÅ¸e von Waldbanditen-Trupps. Gilt fÃƒÂ¼r neu erzeugte Trupps. [Standard: 0.60]" />
+		<string id="adjban_name_MountainBanditMultiplier" text="Gebirgsbanditen TruppgrÃƒÂ¶ÃƒÅ¸en-Multiplikator" />
+		<string id="adjban_hint_MountainBanditMultiplier" text="Skaliert die GrÃƒÂ¶ÃƒÅ¸e von Gebirgsbanditen-Trupps. Gilt fÃƒÂ¼r neu erzeugte Trupps. [Standard: 0.60]" />
+		<string id="adjban_name_LooterMultiplier" text="PlÃƒÂ¼nderer TruppgrÃƒÂ¶ÃƒÅ¸en-Multiplikator" />
+		<string id="adjban_hint_LooterMultiplier" text="Skaliert die GrÃƒÂ¶ÃƒÅ¸e von PlÃƒÂ¼nderer-Trupps. Gilt fÃƒÂ¼r neu erzeugte Trupps. [Standard: 2.00]" />
+		<string id="adjban_name_DeserterMultiplier" text="Deserteur TruppgrÃƒÂ¶ÃƒÅ¸en-Multiplikator" />
+		<string id="adjban_hint_DeserterMultiplier" text="Skaliert die GrÃƒÂ¶ÃƒÅ¸e von Deserteur-Trupps. Gilt fÃƒÂ¼r neu erzeugte Trupps. [Standard: 1.00]" />
+		<string id="adjban_name_SeaRaiderMultiplier" text="SeerÃƒÂ¤uber TruppgrÃƒÂ¶ÃƒÅ¸en-Multiplikator" />
+		<string id="adjban_hint_SeaRaiderMultiplier" text="Skaliert die GrÃƒÂ¶ÃƒÅ¸e von SeerÃƒÂ¤uber-Trupps. Gilt fÃƒÂ¼r neu erzeugte Trupps. [Standard: 0.60]" />
+		<string id="adjban_name_NorthernPirateMultiplier" text="NÃƒÂ¶rdliche Piraten TruppgrÃƒÂ¶ÃƒÅ¸en-Multiplikator" />
+		<string id="adjban_hint_NorthernPirateMultiplier" text="Skaliert die GrÃƒÂ¶ÃƒÅ¸e von nÃƒÂ¶rdlichen Piraten-Trupps. Gilt fÃƒÂ¼r neu erzeugte Trupps. [Standard: 0.60]" />
+		<string id="adjban_name_SouthernPirateMultiplier" text="SÃƒÂ¼dliche Piraten TruppgrÃƒÂ¶ÃƒÅ¸en-Multiplikator" />
+		<string id="adjban_hint_SouthernPirateMultiplier" text="Skaliert die GrÃƒÂ¶ÃƒÅ¸e von sÃƒÂ¼dlichen Piraten-Trupps. Gilt fÃƒÂ¼r neu erzeugte Trupps. [Standard: 0.60]" />
+		<string id="adjban_name_BanditPartySizeLimit" text="Banditen TruppgrÃƒÂ¶ÃƒÅ¸enlimit (beeinflusst Truppgeschwindigkeit)" />
+		<string id="adjban_hint_BanditPartySizeLimit" text="Banditen Truppen desertieren nicht, jedoch verringert sich die Geschwindigkeit der Truppe wenn sie ÃƒÂ¼ber dem Limit ist. Ein hÃƒÂ¶heres Limit erhÃƒÂ¶ht daher die Geschwindigkeit groÃƒÅ¸er Trupps. (Ein Trupp wird langsamer, wenn er mehr Truppen als das Limit hat.) Ãƒâ€žnderung wird erst nach erneutem Laden des Spielstands wirksam! [Standard: 20]" />
+		<string id="adjban_name_MaxNumLooterParties" text="Maximale Anzahl an PlÃƒÂ¼nderer Trupps" />
+		<string id="adjban_format_Parties" text="0 Trupps" />
+		<string id="adjban_hint_MaxNumLooterParties" text="Maximale Anzahl an PlÃƒÂ¼nderer Trupps auf der gesamten Weltkarte. [Standard: 150]" />
+		<string id="adjban_name_MinNumLooterParties" text="Minimale Anzahl an PlÃƒÂ¼nderer Trupps" />
+		<string id="adjban_hint_MinNumLooterParties" text="Sichert mindestens diese Anzahl an PlÃƒÂ¼nderer-Trupps auf der Weltkarte. [Standard: 150]" />
+		<string id="adjban_name_MaxNumDeserterParties" text="Maximale Anzahl an Deserteur Trupps" />
+		<string id="adjban_hint_MaxNumDeserterParties" text="Begrenzt die Gesamtzahl an Deserteur-Trupps auf der Weltkarte. [Standard: 30]" />
+		<string id="adjban_name_MinNumDeserterParties" text="Minimale Anzahl an Deserteur Trupps" />
+		<string id="adjban_hint_MinNumDeserterParties" text="Sichert mindestens diese Anzahl an Deserteur-Trupps auf der Weltkarte. [Standard: 150]" />
+		<string id="adjban_name_MaxNumBanditParties" text="Maximale Anzahl an Banditen Trupps (andere Banditen)" />
+		<string id="adjban_hint_MaxNumBanditParties" text="Begrenzt die Gesamtzahl an anderen Banditen-Trupps (ohne PlÃƒÂ¼nderer, SeerÃƒÂ¤uber und Piraten). [Standard: 5]" />
+		<string id="adjban_name_MaxNumDesertBanditParties" text="Maximale Anzahl an WÃƒÂ¼stenbanditen Trupps" />
+		<string id="adjban_hint_MaxNumDesertBanditParties" text="Begrenzt die Gesamtzahl an WÃƒÂ¼stenbanditen-Trupps auf der Weltkarte. [Standard: 5]" />
+		<string id="adjban_name_MinNumDesertBanditParties" text="Minimale Anzahl an WÃƒÂ¼stenbanditen Trupps" />
+		<string id="adjban_hint_MinNumDesertBanditParties" text="Sichert mindestens diese Anzahl an WÃƒÂ¼stenbanditen-Trupps auf der Weltkarte. [Standard: 150]" />
+		<string id="adjban_name_MaxNumSteppeBanditParties" text="Maximale Anzahl an Steppenbanditen Trupps" />
+		<string id="adjban_hint_MaxNumSteppeBanditParties" text="Begrenzt die Gesamtzahl an Steppenbanditen-Trupps auf der Weltkarte. [Standard: 5]" />
+		<string id="adjban_name_MinNumSteppeBanditParties" text="Minimale Anzahl an Steppenbanditen Trupps" />
+		<string id="adjban_hint_MinNumSteppeBanditParties" text="Sichert mindestens diese Anzahl an Steppenbanditen-Trupps auf der Weltkarte. [Standard: 150]" />
+		<string id="adjban_name_MaxNumForestBanditParties" text="Maximale Anzahl an Waldbanditen Trupps" />
+		<string id="adjban_hint_MaxNumForestBanditParties" text="Begrenzt die Gesamtzahl an Waldbanditen-Trupps auf der Weltkarte. [Standard: 5]" />
+		<string id="adjban_name_MinNumForestBanditParties" text="Minimale Anzahl an Waldbanditen Trupps" />
+		<string id="adjban_hint_MinNumForestBanditParties" text="Sichert mindestens diese Anzahl an Waldbanditen-Trupps auf der Weltkarte. [Standard: 150]" />
+		<string id="adjban_name_MaxNumMountainBanditParties" text="Maximale Anzahl an Gebirgsbanditen Trupps" />
+		<string id="adjban_hint_MaxNumMountainBanditParties" text="Begrenzt die Gesamtzahl an Gebirgsbanditen-Trupps auf der Weltkarte. [Standard: 5]" />
+		<string id="adjban_name_MinNumMountainBanditParties" text="Minimale Anzahl an Gebirgsbanditen Trupps" />
+		<string id="adjban_hint_MinNumMountainBanditParties" text="Sichert mindestens diese Anzahl an Gebirgsbanditen-Trupps auf der Weltkarte. [Standard: 150]" />
+		<string id="adjban_name_MaxNumSeaRaiderParties" text="Maximale Anzahl an SeerÃƒÂ¤uber Trupps" />
+		<string id="adjban_hint_MaxNumSeaRaiderParties" text="Begrenzt die Gesamtzahl an SeerÃƒÂ¤uber-Trupps auf der Weltkarte. [Standard: 5]" />
+		<string id="adjban_name_MinNumSeaRaiderParties" text="Minimale Anzahl an SeerÃƒÂ¤uber Trupps" />
+		<string id="adjban_hint_MinNumSeaRaiderParties" text="Sichert mindestens diese Anzahl an SeerÃƒÂ¤uber-Trupps auf der Weltkarte. [Standard: 150]" />
+		<string id="adjban_name_MaxNumNorthernPirateParties" text="Maximale Anzahl an NÃƒÂ¶rdliche-Piraten Trupps" />
+		<string id="adjban_hint_MaxNumNorthernPirateParties" text="Begrenzt die Gesamtzahl an nÃƒÂ¶rdlichen Piraten-Trupps auf der Weltkarte. [Standard: 5]" />
+		<string id="adjban_name_MinNumNorthernPirateParties" text="Minimale Anzahl an NÃƒÂ¶rdliche-Piraten Trupps" />
+		<string id="adjban_hint_MinNumNorthernPirateParties" text="Sichert mindestens diese Anzahl an nÃƒÂ¶rdlichen Piraten-Trupps auf der Weltkarte. [Standard: 150]" />
+		<string id="adjban_name_MaxNumSouthernPirateParties" text="Maximale Anzahl an SÃƒÂ¼dliche-Piraten Trupps" />
+		<string id="adjban_hint_MaxNumSouthernPirateParties" text="Begrenzt die Gesamtzahl an sÃƒÂ¼dlichen Piraten-Trupps auf der Weltkarte. [Standard: 5]" />
+		<string id="adjban_name_MinNumSouthernPirateParties" text="Minimale Anzahl an SÃƒÂ¼dliche-Piraten Trupps" />
+		<string id="adjban_hint_MinNumSouthernPirateParties" text="Sichert mindestens diese Anzahl an sÃƒÂ¼dlichen Piraten-Trupps auf der Weltkarte. [Standard: 150]" />
+		<string id="adjban_group_Hideouts" text="Verstecke" />
+		<string id="adjban_name_InitialHideoutsPerFaction" text="AnfÃƒÂ¤ngliche Anzahl an Verstecken pro Fraktion" />
+		<string id="adjban_format_Hideouts" text="0 Verstecke" />
+		<string id="adjban_hint_InitialHideoutsPerFaction" text="[Standard: 3]" />
+		<string id="adjban_name_MaxHideoutsPerFaction" text="Maximale Anzahl an Verstecken pro Fraktion" />
+		<string id="adjban_hint_MaxHideoutsPerFaction" text="[Standard: 10]" />
+		<string id="adjban_name_MinPartiesToInfestHideout" text="Mindestanzahl an Trupps um Versteck zu bevÃƒÂ¶lkern" />
+		<string id="adjban_hint_MinPartiesToInfestHideout" text="[Standard: 2]" />
+		<string id="adjban_name_MaxPartiesAroundHideout" text="Maximale Anzahl an Trupps um Verstecke" />
+		<string id="adjban_hint_MaxPartiesAroundHideout" text="Maximale Anzahl an Fraktions-Trupps in der Umgebung von Verstecken. [Standard: 8]" />
+		<string id="adjban_name_MaxPartiesInHideout" text="Maximale Anzahl an Trupps in Versteck" />
+		<string id="adjban_hint_MaxPartiesInHideout" text="[Standard: 4]" />
+		<string id="adjban_name_MaxTroopCountFirstFight" text="Maximale Anzahl an Truppen im Versteck-Kampf - Faktor" />
+		<string id="adjban_hint_MaxTroopCountFirstFight" text="TatsÃƒÂ¤chliche Anzahl ist abhÃƒÂ¤ngig von der Anzahl der Truppen im Versteck und dem Fortschritt des Spielers (niedrigste Anzahl ist 12, bei Spieler-Fortschritt von 0). Der Wert 0 deaktiviert das Limit. [Standard: 1.0]" />
+		<string id="adjban_name_MaxTroopCountBossFight" text="Maximale Anzahl an Truppen im Boss-Kampf - Faktor" />
+		<string id="adjban_hint_MaxTroopCountBossFight" text="TatsÃƒÂ¤chliche Anzahl ist abhÃƒÂ¤ngig von der Anzahl der Truppen im Versteck und dem Fortschritt des Spielers (niedrigste Anzahl ist 6, bei Spieler-Fortschritt von 0). Der Wert 0 deaktiviert das Limit. [Standard: 1.0]" />
+		<string id="adjban_name_SpawnPercFirstFight" text="Spawn-Anteil im Versteck-Kampf" />
+		<string id="adjban_hint_SpawnPercFirstFight" text="Anteil der Truppen welche im Kampf durch das Versteck spawnen, vor dem Boss-Kampf. [Standard: 75%]" />
+		<string id="adjban_name_MinBanditTroopsHideoutMission" text="Mindestanzahl an Banditen Truppen in Versteck-Missionen" />
+		<string id="adjban_format_Troops" text="0 Truppen" />
+		<string id="adjban_hint_MinBanditTroopsHideoutMission" text="[Standard: 10]" />
+		<string id="adjban_name_MaxPlayerTroopsHideoutSneakInMission" text="Maximale Anzahl an Spieler Truppen in Versteck-Schleichmission" />
+		<string id="adjban_hint_MaxPlayerTroopsHideoutSneakInMission" text="Maximale Spielertruppenzahl beim Befehl &quot;Schleicht hinein&quot; in einer Versteck-Mission. [Standard: 20]" />
+		<string id="adjban_name_MaxPlayerTroopsHideoutAssaultMission" text="Maximale Anzahl an Spieler Truppen in Versteck-Angriffsmission" />
+		<string id="adjban_hint_MaxPlayerTroopsHideoutAssaultMission" text="Maximale Spielertruppenzahl bei einem direkten Versteck-Angriff. [Standard: 20]" />
+		<string id="adjban_name_EnableLogging" text="Protokollierung aktivieren" />
+		<string id="adjban_hint_EnableLogging" text="Schreibt Debug-Informationen nach %USERPROFILE%\Documents\Mount and Blade II Bannerlord\Configs\ModLogs\AdjustableBandits.log. [Standard: Aus]" />
+		<string id="adjban_group_Actions" text="Aktionen" />
+		<string id="adjban_name_ResetSettingsFromJsonDefaults" text="Einstellungen aus defaults-JSON zurÃƒÂ¼cksetzen" />
+		<string id="adjban_hint_ResetSettingsFromJsonDefaults" text="LÃƒÂ¤dt Werte aus ModuleData/adjustablebandits.defaults.json und wendet sie an. MCM erneut ÃƒÂ¶ffnen, um aktualisierte Werte zu sehen." />
+		<string id="adjban_content_ResetSettingsFromJsonDefaults" text="Aus JSON zurÃƒÂ¼cksetzen" />
+		<string id="adjban_name_RemoveBanditParties" text="Entferne alle Banditen-Trupps" />
+		<string id="adjban_hint_RemoveBanditParties" text="Entfernt alle Banditen-Trupps im laufenden Spiel; kann nicht rÃƒÂ¼ckgÃƒÂ¤ngig gemacht werden!" />
+		<string id="adjban_content_RemoveBanditParties" text="Entferne Banditen-Trupps" />
+		<string id="adjban_inquiryTitle_RemoveBandits" text="Banditen-Trupps entfernen..." />
+		<string id="adjban_inquiryText_RemoveBandits" text="Alle Banditen-Trupps entfernen?
+      Kann nicht rÃƒÂ¼ckgÃƒÂ¤ngig gemacht werden!" />
+		<string id="adjban_yes" text="Ja" />
+		<string id="adjban_no" text="Nein" />
+		<string id="adjban_name_RemoveHideouts" text="Entferne alle Verstecke" />
+		<string id="adjban_hint_RemoveHideouts" text="Entfernt alle Verstecke im laufenden Spiel; kann nicht rÃƒÂ¼ckgÃƒÂ¤ngig gemacht werden!" />
+		<string id="adjban_content_RemoveHideouts" text="Entferne Verstecke" />
+		<string id="adjban_inquiryTitle_RemoveHideouts" text="Verstecke entfernen..." />
+		<string id="adjban_inquiryText_RemoveHideouts" text="Alle Verstecke entfernen?
+      Kann nicht rÃƒÂ¼ckgÃƒÂ¤ngig gemacht werden!" />
+		<string id="adjban_name_GetPartyDetails" text="Truppdetails anzeigen" />
+		<string id="adjban_hint_GetPartyDetails" text="Zeigt Gesamtanzahl und DurchschnittsgrÃƒÂ¶ÃƒÅ¸e pro Banditenfraktion; protokolliert jeden Trupp mit GrÃƒÂ¶ÃƒÅ¸e." />
+		<string id="adjban_content_GetPartyDetails" text="Truppdetails anzeigen" />
+		<string id="adjban_text_BanditBonus" text="Banditen Bonus" />
 	</strings>
 </base>
