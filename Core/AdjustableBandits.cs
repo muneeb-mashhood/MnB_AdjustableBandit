@@ -1,4 +1,6 @@
 ﻿using MCM.Abstractions.Base.Global;
+using MCM.Abstractions;
+using MCM.Abstractions.Base;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -105,8 +107,22 @@ namespace AdjustableBandits
 		{
 			try
 			{
+				if (settings == null)
+					return;
+
+				var baseSettings = settings as BaseSettings;
+				if (baseSettings != null)
+				{
+					BaseSettingsProvider.Instance?.SaveSettings(baseSettings);
+					return;
+				}
+
+				// Fallback for older MCM variants that may expose a Save() instance method.
 				var saveMethod = settings.GetType().GetMethod("Save", BindingFlags.Public | BindingFlags.Instance);
-				saveMethod?.Invoke(settings, null);
+				if (saveMethod != null)
+					saveMethod.Invoke(settings, null);
+				else
+					LogError("defaults: save skipped because no supported MCM save API was found.");
 			}
 			catch (Exception saveExc)
 			{

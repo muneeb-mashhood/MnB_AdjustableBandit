@@ -48,7 +48,7 @@ namespace AdjustableBandits
 			var configuredTroopCount = isAssault
 				? settings.PlayerMaximumTroopCountForHideoutAssaultMission
 				: settings.PlayerMaximumTroopCountForHideoutSneakInMission;
-			var minimumTroopCount = isAssault ? 8 : 20;
+			var minimumTroopCount = 25;
 			if (configuredTroopCount < minimumTroopCount)
 				configuredTroopCount = minimumTroopCount;
 			else if (configuredTroopCount > 100)

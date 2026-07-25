@@ -42,13 +42,13 @@ namespace AdjustableBandits
 			if (NumberOfMinimumSouthernPirateParties > NumberOfMaximumSouthernPirateParties)
 				NumberOfMinimumSouthernPirateParties = NumberOfMaximumSouthernPirateParties;
 
-			if (PlayerMaximumTroopCountForHideoutSneakInMission < 20)
-				PlayerMaximumTroopCountForHideoutSneakInMission = 20;
+			if (PlayerMaximumTroopCountForHideoutSneakInMission < 25)
+				PlayerMaximumTroopCountForHideoutSneakInMission = 25;
 			else if (PlayerMaximumTroopCountForHideoutSneakInMission > 100)
 				PlayerMaximumTroopCountForHideoutSneakInMission = 100;
 
-			if (PlayerMaximumTroopCountForHideoutAssaultMission < 8)
-				PlayerMaximumTroopCountForHideoutAssaultMission = 8;
+			if (PlayerMaximumTroopCountForHideoutAssaultMission < 25)
+				PlayerMaximumTroopCountForHideoutAssaultMission = 25;
 			else if (PlayerMaximumTroopCountForHideoutAssaultMission > 100)
 				PlayerMaximumTroopCountForHideoutAssaultMission = 100;
 		}
@@ -577,29 +577,29 @@ namespace AdjustableBandits
 
 		[SettingPropertyInteger(
 			"{=adjban_name_MaxPlayerTroopsHideoutSneakInMission}Maximum Player Troops in Hideout Sneak-In Mission",
-			20,
+			25,
 			100,
 			"{=adjban_format_Troops}0 Troops",
 			RequireRestart = false,
-			HintText = "{=adjban_hint_MaxPlayerTroopsHideoutSneakInMission}Maximum player troops allowed when selecting Sneak In for a hideout mission. [Default: 20]",
+			HintText = "{=adjban_hint_MaxPlayerTroopsHideoutSneakInMission}Maximum player troops allowed when selecting Sneak In for a hideout mission. [Default: 25]",
 			Order = 9)]
 		[SettingPropertyGroup(
 			HideoutsGroupName,
 			GroupOrder = 5)]
-		public int PlayerMaximumTroopCountForHideoutSneakInMission { get; set; } = 20;
+		public int PlayerMaximumTroopCountForHideoutSneakInMission { get; set; } = 25;
 
 		[SettingPropertyInteger(
 			"{=adjban_name_MaxPlayerTroopsHideoutAssaultMission}Maximum Player Troops in Hideout Assault Mission",
-			8,
+			25,
 			100,
 			"{=adjban_format_Troops}0 Troops",
 			RequireRestart = false,
-			HintText = "{=adjban_hint_MaxPlayerTroopsHideoutAssaultMission}Maximum player troops allowed when launching a direct hideout assault. [Default: 20]",
+			HintText = "{=adjban_hint_MaxPlayerTroopsHideoutAssaultMission}Maximum player troops allowed when launching a direct hideout assault. [Default: 25]",
 			Order = 10)]
 		[SettingPropertyGroup(
 			HideoutsGroupName,
 			GroupOrder = 5)]
-		public int PlayerMaximumTroopCountForHideoutAssaultMission { get; set; } = 20;
+		public int PlayerMaximumTroopCountForHideoutAssaultMission { get; set; } = 25;
 		#endregion
 
 		#region LOGS

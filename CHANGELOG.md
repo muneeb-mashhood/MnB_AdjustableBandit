@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.3.3.1 - 2026-07-25
+- Fixed MCM reset-from-JSON persistence so settings are saved reliably to the global settings file.
+- Increased minimum player troop count for both hideout Sneak-In and Assault flows to 25 to match in-game requirements.
+- Updated hideout player troop defaults in code and defaults JSON (Sneak-In: 25, Assault: 25).
+
 ## 1.3.3.0 - 2026-06-07
 - Added compatibility for The Old Realms (TOR) bandit parties.
 - Improved bandit classification to detect category from clan id, culture id, and default party template id.

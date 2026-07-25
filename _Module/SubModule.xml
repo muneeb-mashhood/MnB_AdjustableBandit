@@ -1,7 +1,7 @@
 ﻿<Module>
 	<Name value="Adjustable Bandits"/>
 	<Id value="sy.AdjustableBandits"/>
-	<Version value="v1.3.3.0"/>
+	<Version value="v1.3.3.1"/>
 	<DefaultModule value="false"/>
 	<SingleplayerModule value="true"/>
 	<MultiplayerModule value="false"/>

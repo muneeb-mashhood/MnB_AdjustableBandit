@@ -34,8 +34,8 @@ namespace AdjustableBandits
         NumberOfMaximumTroopCountForBossFightInHideoutFactor = 1.0f,
         SpawnPercentageForFirstFightInHideoutMission = 0.75f,
         NumberOfMinimumBanditTroopsInHideoutMission = 10,
-        PlayerMaximumTroopCountForHideoutSneakInMission = 20,
-        PlayerMaximumTroopCountForHideoutAssaultMission = 20
+        PlayerMaximumTroopCountForHideoutSneakInMission = 25,
+        PlayerMaximumTroopCountForHideoutAssaultMission = 25
       },
       BanditPartySizeLimit = 20,
       EnableLogging = false
