@@ -31,6 +31,7 @@ namespace AdjustableBandits
 		private const string ForestBanditClanId = "forest_bandits";
 		private const string MountainBanditClanId = "mountain_bandits";
 		private const string DeserterClanId = "deserters";
+		private const string TorGreenskinBanditsClanId = "tor_greenskin_bandits";
 		private static readonly HashSet<MBGUID> ScaledPartyIds = new HashSet<MBGUID>();
 		private static readonly HashSet<MBGUID> LoggedPartyIds = new HashSet<MBGUID>();
 		private static MethodInfo CreateBanditPartyMethod;
@@ -298,6 +299,8 @@ namespace AdjustableBandits
 					return settings.NumberOfMaximumMountainBanditParties;
 				case DeserterClanId:
 					return settings.NumberOfMaximumDeserterParties;
+				case TorGreenskinBanditsClanId:
+					return settings.NumberOfMaximumBanditParties;
 				default:
 					return settings.NumberOfMaximumBanditParties;
 			}
@@ -420,6 +423,8 @@ namespace AdjustableBandits
 					return settings.NumberOfMaximumMountainBanditParties;
 				case DeserterClanId:
 					return settings.NumberOfMaximumDeserterParties;
+				case TorGreenskinBanditsClanId:
+					return settings.NumberOfMaximumBanditParties;
 				default:
 					return settings.NumberOfMaximumBanditParties;
 			}
@@ -687,6 +692,8 @@ namespace AdjustableBandits
 					return settings.MountainBanditMultiplier;
 				case DeserterClanId:
 					return settings.DeserterMultiplier;
+				case TorGreenskinBanditsClanId:
+					return settings.BanditMultiplier;
 				default:
 					return settings.BanditMultiplier;
 			}
@@ -700,25 +707,56 @@ namespace AdjustableBandits
 		private static string GetBanditClanId(Clan clan)
 		{
 			var id = clan?.StringId?.ToLowerInvariant() ?? string.Empty;
-			if (id.Contains("looter"))
-				return LooterClanId;
-			if (id.Contains("northern_pirate"))
-				return NorthernPiratesClanId;
-			if (id.Contains("southern_pirate"))
-				return SouthernPiratesClanId;
-			if (id.Contains("sea_raider"))
-				return SeaRaiderClanId;
-			if (id.Contains("desert_bandit"))
-				return DesertBanditClanId;
-			if (id.Contains("steppe_bandit"))
-				return SteppeBanditClanId;
-			if (id.Contains("forest_bandit"))
-				return ForestBanditClanId;
-			if (id.Contains("mountain_bandit"))
-				return MountainBanditClanId;
-			if (id.Contains("deserter"))
-				return DeserterClanId;
+			var cultureId = clan?.Culture?.StringId?.ToLowerInvariant() ?? string.Empty;
+			var templateId = clan?.DefaultPartyTemplate?.StringId?.ToLowerInvariant() ?? string.Empty;
+
+			var classifiedId = ClassifyBanditCategory(id);
+			if (!string.IsNullOrWhiteSpace(classifiedId))
+				return classifiedId;
+
+			classifiedId = ClassifyBanditCategory(cultureId);
+			if (!string.IsNullOrWhiteSpace(classifiedId))
+				return classifiedId;
+
+			classifiedId = ClassifyBanditCategory(templateId);
+			if (!string.IsNullOrWhiteSpace(classifiedId))
+				return classifiedId;
+
+			if (id.Contains("greenskin_bandit") ||
+				cultureId.Contains("greenskin_bandit") ||
+				templateId.Contains("greenskin_bandit"))
+				return TorGreenskinBanditsClanId;
+
 			return id;
+		}
+
+		private static string ClassifyBanditCategory(string source)
+		{
+			if (string.IsNullOrWhiteSpace(source))
+				return null;
+
+			if (source.Contains("looter"))
+				return LooterClanId;
+			if (source.Contains("northern_pirate"))
+				return NorthernPiratesClanId;
+			if (source.Contains("southern_pirate"))
+				return SouthernPiratesClanId;
+			if (source.Contains("sea_raider"))
+				return SeaRaiderClanId;
+			if (source.Contains("desert_bandit"))
+				return DesertBanditClanId;
+			if (source.Contains("steppe_bandit"))
+				return SteppeBanditClanId;
+			if (source.Contains("forest_bandit"))
+				return ForestBanditClanId;
+			if (source.Contains("mountain_bandit"))
+				return MountainBanditClanId;
+			if (source.Contains("deserter"))
+				return DeserterClanId;
+			if (source.Contains("greenskin_bandit"))
+				return TorGreenskinBanditsClanId;
+
+			return null;
 		}
 
 		private static bool IsTargetParty(MobileParty party)

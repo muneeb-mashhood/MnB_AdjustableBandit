@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.3.3.0 - 2026-06-07
+- Added compatibility for The Old Realms (TOR) bandit parties.
+- Improved bandit classification to detect category from clan id, culture id, and default party template id.
+- Added TOR greenskin bandit handling (`greenskin_bandits` / `greenskin_bandit`) so party scaling and limits apply correctly.
+- Kept existing Adjustable Bandits settings behavior intact while extending support to TOR-specific bandit data.
+
 ## 1.3.2.0 - 2026-02-14
 - Split hideout player troop cap into separate settings for Sneak-In and Assault missions.
 - Updated hideout mission limits to enforce mission-specific minimums (Sneak-In: 20, Assault: 8) with max 100.
